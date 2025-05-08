@@ -19,14 +19,11 @@ import com.cts.service.TicketBookingService;
 @RequestMapping("/tickets")
 public class TicketBookingController {
 
-    private final TicketBookingServiceImpl ticketBookingServiceImpl;
+ 
 
 	@Autowired
 	private TicketBookingService ticketBookingService;
 
-    TicketBookingController(TicketBookingServiceImpl ticketBookingServiceImpl) {
-        this.ticketBookingServiceImpl = ticketBookingServiceImpl;
-    }
 
 	@PostMapping("/book")
 	public TicketBooking bookTicket(@RequestBody TicketBooking ticket) {

@@ -16,7 +16,10 @@ import com.cts.model.TicketBooking;
 import com.cts.model.TicketBooking.Status;
 import com.cts.repository.TicketBookingRepository;
 
+import jakarta.transaction.Transactional;
+
 @Service
+@Transactional
 public class TicketBookingServiceImpl implements TicketBookingService {
 	@Autowired
 	private TicketBookingRepository repository;
@@ -25,6 +28,7 @@ public class TicketBookingServiceImpl implements TicketBookingService {
 	@Autowired
 	private UserRegistrationClient userClient;
 
+	
 	@Override
 	public TicketBooking bookTicket(TicketBooking ticket) {
 
@@ -40,12 +44,13 @@ public class TicketBookingServiceImpl implements TicketBookingService {
 			throw new RuntimeException("User not found with id: " + ticket.getUserId());
 		}
 
+		// decrease ticket count in Event Management
+		eventClient.decreaseTicketCount(ticket.getEventId());
 		// Set booking date and status
 		ticket.setTicketBookingDate(LocalDateTime.now());
 		ticket.setTicketStatus(TicketBooking.Status.BOOKED);
 
-		// decrease ticket count in Event Management
-		eventClient.decreaseTicketCount(ticket.getEventId());
+
 
 		// Save the ticket booking
 		return repository.save(ticket);

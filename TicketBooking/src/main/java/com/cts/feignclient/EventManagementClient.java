@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import com.cts.dto.EventManagement;
 
-@FeignClient(name="EVENTMANAGEMENT",path="events")
+@FeignClient(name="EVENTMANAGEMENT",path="/events")
 public interface EventManagementClient {
      
 	@GetMapping("/fetcheventbyid/{eid}")
