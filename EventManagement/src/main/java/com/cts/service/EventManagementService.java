@@ -26,4 +26,5 @@ public interface EventManagementService {
 	public abstract List<EventManagement> getEventByLocation(String location) throws Exception;
 	
 	public abstract List<EventManagement> getEventByDate(Date date) throws Exception;
+	
 }

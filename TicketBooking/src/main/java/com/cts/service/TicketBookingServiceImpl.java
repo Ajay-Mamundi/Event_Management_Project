@@ -5,8 +5,11 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 
+import com.cts.dto.EmailRequest;
 import com.cts.dto.EventManagement;
 import com.cts.dto.UserRegistration;
 import com.cts.exceptions.TicketNotFoundException;
@@ -21,16 +24,19 @@ import jakarta.transaction.Transactional;
 @Service
 @Transactional
 public class TicketBookingServiceImpl implements TicketBookingService {
+
 	@Autowired
 	private TicketBookingRepository repository;
 	@Autowired
 	private EventManagementClient eventClient;
 	@Autowired
 	private UserRegistrationClient userClient;
-
+	@Autowired
+	private JavaMailSender javaMailSender;
 	
+
 	@Override
-	public TicketBooking bookTicket(TicketBooking ticket) {
+	public TicketBooking bookTicket(TicketBooking ticket,EmailRequest request) {
 
 		// Check if the event exists
 		EventManagement eventDetails = eventClient.getEventById(ticket.getEventId());
@@ -49,9 +55,11 @@ public class TicketBookingServiceImpl implements TicketBookingService {
 		// Set booking date and status
 		ticket.setTicketBookingDate(LocalDateTime.now());
 		ticket.setTicketStatus(TicketBooking.Status.BOOKED);
-
-
-
+		
+		 UserRegistration user=userClient.getUserById(ticket.getUserId());
+		 String emailId=user.getUserEmail();
+		 sendEmail(emailId,request.getSubject(), request.getMessage());
+		
 		// Save the ticket booking
 		return repository.save(ticket);
 
@@ -93,7 +101,17 @@ public class TicketBookingServiceImpl implements TicketBookingService {
 		repository.save(ticket);
 		return "Ticket cancelled";
 
-		
 	}
+	public String sendEmail(String to,String subject,String body) {
+		SimpleMailMessage message=new SimpleMailMessage();
+		message.setTo(to);
+		message.setSubject(subject);
+		message.setText(body);
+		javaMailSender.send(message);
+		return "final";
+	}
+	
+	
+	
 
 }
