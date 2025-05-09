@@ -30,7 +30,7 @@ public class FeedbackAndRatings {
 	@NotNull(message = "User ID cannot be null")
 	private int userId;
 	@Range(min = 1, max = 5, message = "Rating must be between 1 and 5")
-	private int rating;
+	private Double rating;
 	@Size(max = 500, message = "Comments cannot exceed 500 characters")
 	private String comments;
 	private LocalDateTime submittedTimestamp;

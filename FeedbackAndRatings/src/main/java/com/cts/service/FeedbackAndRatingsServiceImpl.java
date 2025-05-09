@@ -26,10 +26,10 @@ public class FeedbackAndRatingsServiceImpl implements FeedbackAndRatingsService 
 
 	@Override
 	public String saveFeedback(FeedbackAndRatings feedback) {
-//		EventManagement eventId = eventClient.getEventById(feedback.getEventId());
-//		if (eventId == null) {
-//			return "Enter valid EventId";
-//		}
+		EventManagement eventId = eventClient.getEventById(feedback.getEventId());
+		if (eventId == null) {
+			return "Enter valid EventId";
+		}
 		feedback.setSubmittedTimestamp(LocalDateTime.now());
 		repository.save(feedback);
 		return "Feedback saved successfully";

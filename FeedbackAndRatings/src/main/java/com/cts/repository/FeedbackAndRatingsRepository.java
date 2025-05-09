@@ -1,13 +1,11 @@
 package com.cts.repository;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 
 import com.cts.model.FeedbackAndRatings;
-
-import jakarta.persistence.Tuple;
 
 public interface FeedbackAndRatingsRepository extends JpaRepository<FeedbackAndRatings, Integer> {
 
@@ -15,6 +13,7 @@ public interface FeedbackAndRatingsRepository extends JpaRepository<FeedbackAndR
 
 	List<FeedbackAndRatings> findByEventId(int eventId);
 
+	//@Query("")
 	Double findAverageRatingByEventId(int eventId);
 
 	//Optional<FeedbackAndRatings> findById();
