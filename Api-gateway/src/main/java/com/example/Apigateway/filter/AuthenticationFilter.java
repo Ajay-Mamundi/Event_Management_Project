@@ -64,11 +64,11 @@ public class AuthenticationFilter extends AbstractGatewayFilterFactory<Authentic
 					||path.startsWith("/tickets");
 
 		} else if ("ORGANIZER".equalsIgnoreCase(role)) {
-			return path.startsWith("/ticket") || path.startsWith("/event")
+			return path.startsWith("/tickets") || path.startsWith("/events")
 					|| path.startsWith("/feedbackratings") || path.startsWith("/users")&& method.equalsIgnoreCase("GET");
 				
 		}else if ("USER".equalsIgnoreCase(role)) {
-			return (path.startsWith("/users") && (method.equalsIgnoreCase("POST") || method.equalsIgnoreCase("PUT")))
+			return path.startsWith("/feedbackandratings") ||(path.startsWith("/users") && (method.equalsIgnoreCase("POST") || method.equalsIgnoreCase("PUT")))
 					|| path.startsWith("/events") && method.equalsIgnoreCase("GET") || path.startsWith("/ticket");
 
 		}
