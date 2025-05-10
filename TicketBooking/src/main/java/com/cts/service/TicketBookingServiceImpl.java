@@ -8,11 +8,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.cts.dto.EmailRequest;
 import com.cts.dto.EventManagement;
 import com.cts.dto.UserRegistration;
-import com.cts.exceptions.TicketNotFoundException;
+import  com.cts.exceptions.TicketNotFoundException;
 import com.cts.feignclient.EventManagementClient;
 import com.cts.feignclient.UserRegistrationClient;
 import com.cts.model.TicketBooking;
@@ -25,93 +27,104 @@ import jakarta.transaction.Transactional;
 @Transactional
 public class TicketBookingServiceImpl implements TicketBookingService {
 
-	@Autowired
-	private TicketBookingRepository repository;
-	@Autowired
-	private EventManagementClient eventClient;
-	@Autowired
-	private UserRegistrationClient userClient;
-	@Autowired
-	private JavaMailSender javaMailSender;
-	
+    private static final Logger logger = LoggerFactory.getLogger(TicketBookingServiceImpl.class);
 
-	@Override
-	public TicketBooking bookTicket(TicketBooking ticket,EmailRequest request) {
+    @Autowired
+    private TicketBookingRepository repository;
+    @Autowired
+    private EventManagementClient eventClient;
+    @Autowired
+    private UserRegistrationClient userClient;
+    @Autowired
+    private JavaMailSender javaMailSender;
 
-		// Check if the event exists
-		EventManagement eventDetails = eventClient.getEventById(ticket.getEventId());
-		if (eventDetails == null) {
-			throw new RuntimeException("Event not found with id: " + ticket.getEventId());
-		}
+    @Override
+    public TicketBooking bookTicket(TicketBooking ticket, EmailRequest request) {
+        logger.info("Booking ticket for event ID: {} and user ID: {}", ticket.getEventId(), ticket.getUserId());
 
-		// Check if the user exists
-		UserRegistration userDetails = userClient.getUserById(ticket.getUserId());
-		if (userDetails == null) {
-			throw new RuntimeException("User not found with id: " + ticket.getUserId());
-		}
+        // Check if the event exists
+        EventManagement eventDetails = eventClient.getEventById(ticket.getEventId());
+        if (eventDetails == null) {
+            logger.error("Event not found with ID: {}", ticket.getEventId());
+            throw new RuntimeException("Event not found with id: " + ticket.getEventId());
+        }
 
-		// decrease ticket count in Event Management
-		eventClient.decreaseTicketCount(ticket.getEventId());
-		// Set booking date and status
-		ticket.setTicketBookingDate(LocalDateTime.now());
-		ticket.setTicketStatus(TicketBooking.Status.BOOKED);
-		
-		 UserRegistration user=userClient.getUserById(ticket.getUserId());
-		 String emailId=user.getUserEmail();
-		 sendEmail(emailId,request.getSubject(), request.getMessage());
-		
-		// Save the ticket booking
-		return repository.save(ticket);
+        // Check if the user exists
+        UserRegistration userDetails = userClient.getUserById(ticket.getUserId());
+        if (userDetails == null) {
+            logger.error("User not found with ID: {}", ticket.getUserId());
+            throw new RuntimeException("User not found with id: " + ticket.getUserId());
+        }
 
-	}
+        // Decrease ticket count in Event Management
+        eventClient.decreaseTicketCount(ticket.getEventId());
+        logger.info("Decreased ticket count for event ID: {}", ticket.getEventId());
 
-	@Override
-	public TicketBooking getTicketById(int ticketId) throws TicketNotFoundException {
-		Optional<TicketBooking> optional = repository.findById(ticketId);
-		if (optional.isPresent()) {
-			return optional.get();
-		} else {
-			throw new TicketNotFoundException(ticketId);
-		}
+        // Set booking date and status
+        ticket.setTicketBookingDate(LocalDateTime.now());
+        ticket.setTicketStatus(TicketBooking.Status.BOOKED);
 
-	}
+        UserRegistration user = userClient.getUserById(ticket.getUserId());
+        String emailId = user.getUserEmail();
+        sendEmail(emailId, request.getSubject(), request.getMessage());
+        logger.info("Sent email to user ID: {}", ticket.getUserId());
 
-	@Override
-	public List<TicketBooking> getAllTickets() {
-		return repository.findAll();
+        // Save the ticket booking
+        TicketBooking savedTicket = repository.save(ticket);
+        logger.info("Ticket booked successfully for event ID: {} and user ID: {}", ticket.getEventId(), ticket.getUserId());
+        return savedTicket;
+    }
 
-	}
+    @Override
+    public TicketBooking getTicketById(int ticketId) throws TicketNotFoundException {
+        logger.info("Fetching ticket with ID: {}", ticketId);
+        Optional<TicketBooking> optional = repository.findById(ticketId);
+        if (optional.isPresent()) {
+            logger.info("Ticket found with ID: {}", ticketId);
+            return optional.get();
+        } else {
+            logger.error("Ticket not found with ID: {}", ticketId);
+            throw new TicketNotFoundException(ticketId);
+        }
+    }
 
-	@Override
-	public List<TicketBooking> getTicketsByUserId(int userId) {
-		return repository.findByUserId(userId);
-	}
+    @Override
+    public List<TicketBooking> getAllTickets() {
+        logger.info("Fetching all tickets");
+        return repository.findAll();
+    }
 
-	@Override
-	public List<TicketBooking> getTicketsByEventId(int eventId) {
-		// TODO Auto-generated method stub
-		return repository.findByEventId(eventId);
-	}
+    @Override
+    public List<TicketBooking> getTicketsByUserId(int userId) {
+        logger.info("Fetching tickets for user ID: {}", userId);
+        return repository.findByUserId(userId);
+    }
 
-	@Override
-	public String cancelTicket(int ticketId) throws TicketNotFoundException {
-		TicketBooking ticket = getTicketById(ticketId);
-		ticket.setTicketStatus(Status.CANCELLED);
-		eventClient.increaseTicketCount(ticket.getEventId());
-		repository.save(ticket);
-		return "Ticket cancelled";
+    @Override
+    public List<TicketBooking> getTicketsByEventId(int eventId) {
+        logger.info("Fetching tickets for event ID: {}", eventId);
+        return repository.findByEventId(eventId);
+    }
 
-	}
-	public String sendEmail(String to,String subject,String body) {
-		SimpleMailMessage message=new SimpleMailMessage();
-		message.setTo(to);
-		message.setSubject(subject);
-		message.setText(body);
-		javaMailSender.send(message);
-		return "final";
-	}
-	
-	
-	
+    @Override
+    public String cancelTicket(int ticketId) throws TicketNotFoundException {
+        logger.info("Cancelling ticket with ID: {}", ticketId);
+        TicketBooking ticket = getTicketById(ticketId);
+        ticket.setTicketStatus(Status.CANCELLED);
+        eventClient.increaseTicketCount(ticket.getEventId());
+        repository.save(ticket);
+        logger.info("Ticket cancelled with ID: {}", ticketId);
+        return "Ticket cancelled";
+    }
 
+    public String sendEmail(String to, String subject, String body) {
+        logger.info("Sending email to: {}", to);
+        SimpleMailMessage message = new SimpleMailMessage();
+        message.setTo(to);
+        message.setSubject(subject);
+        message.setText(body);
+        javaMailSender.send(message);
+        logger.info("Email sent to: {}", to);
+        return "final";
+    }
 }

@@ -13,8 +13,9 @@ public interface FeedbackAndRatingsRepository extends JpaRepository<FeedbackAndR
 
 	List<FeedbackAndRatings> findByEventId(int eventId);
 
-	//@Query("")
-	Double findAverageRatingByEventId(int eventId);
+
+   // @Query("SELECT AVG(f.rating) FROM FeedbackAndRatings f WHERE f.eventId = :eventId")
+    Double findAverageRatingByEventId(int eventId);
 
 	//Optional<FeedbackAndRatings> findById();
 
