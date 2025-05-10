@@ -1421,3 +1421,4 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 2025-05-10T16:23:40.581+05:30  INFO 14464 --- [TicketBooking] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 3032
 2025-05-10T16:23:40.594+05:30  INFO 14464 --- [TicketBooking] [restartedMain] com.cts.TicketBookingApplication         : Started TicketBookingApplication in 7.641 seconds (process running for 8.555)
 2025-05-10T16:23:40.614+05:30  INFO 14464 --- [TicketBooking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETBOOKING/LTIN617400.cts.com:TicketBooking:3032 - registration status: 204
+2025-05-10T16:28:40.225+05:30  INFO 14464 --- [TicketBooking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
