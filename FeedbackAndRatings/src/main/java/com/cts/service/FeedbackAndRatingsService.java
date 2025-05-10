@@ -12,12 +12,10 @@ public abstract String saveFeedback(FeedbackAndRatings feedback);
     
     public abstract String updateFeedback(int feedbackId, FeedbackAndRatings feedback) throws FeedbackAndRatingsNotFoundException;
     
-    public abstract String deleteFeedback(int feedbackId);
+    public abstract String deleteFeedback(int feedbackId) throws FeedbackAndRatingsNotFoundException;
     
     public abstract FeedbackAndRatings getFeedbackById(int feedbackId) throws FeedbackAndRatingsNotFoundException;
-    
-    public abstract List<FeedbackAndRatings> getAllFeedbacksByUser(int userId);
-    
+        
     public abstract List<FeedbackAndRatings> getAllfeedbacks();
     
     public abstract List<FeedbackAndRatings> getAllFeedbacksByEvent(int eventId);

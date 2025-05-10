@@ -867,3 +867,557 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
 
 2025-05-10T13:40:12.215+05:30  INFO 3792 --- [TicketBooking] [RMI TCP Connection(161)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-05-10T14:46:14.522+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.cts.TicketBookingApplication         : Starting TicketBookingApplication using Java 21.0.6 with PID 23400 (C:\Users\2401270\git\Em_project\TicketBooking\target\classes started by 2401270 in C:\Users\2401270\git\Em_project\TicketBooking)
+2025-05-10T14:46:14.528+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.cts.TicketBookingApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-05-10T14:46:14.617+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8083
+2025-05-10T14:46:14.617+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8083:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8083/TicketBooking/default": Read timed out. Will be trying the next url if available
+2025-05-10T14:46:14.618+05:30  WARN 23400 --- [TicketBooking] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@2d09aa78 uris = array<String>['http://localhost:8083'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8083/TicketBooking/default": Read timed out
+2025-05-10T14:46:14.618+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8083
+2025-05-10T14:46:14.618+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=TicketBooking, profiles=[default], label=null, version=7a833fc721876b5273d3e4e288ddb7b692088b6d, state=
+2025-05-10T14:46:14.622+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-10T14:46:14.623+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-10T14:46:16.180+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-10T14:46:16.183+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2025-05-10T14:46:16.234+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cts.repository.TicketBookingRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-05-10T14:46:16.235+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 0 JDBC repository interfaces.
+2025-05-10T14:46:16.260+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-10T14:46:16.261+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-10T14:46:16.466+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 197 ms. Found 1 JPA repository interface.
+2025-05-10T14:46:16.919+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c16f4aaf-366e-3c07-b82c-e3ed7e91ef65
+2025-05-10T14:46:17.636+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 3032 (http)
+2025-05-10T14:46:17.664+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-10T14:46:17.665+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-10T14:46:17.778+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-10T14:46:17.779+05:30  INFO 23400 --- [TicketBooking] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3153 ms
+2025-05-10T14:46:17.998+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-10T14:46:18.082+05:30  INFO 23400 --- [TicketBooking] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-10T14:46:18.134+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-10T14:46:18.538+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-10T14:46:18.581+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-10T14:46:19.103+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@504d0f85
+2025-05-10T14:46:19.107+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-10T14:46:19.187+05:30  WARN 23400 --- [TicketBooking] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-10T14:46:19.230+05:30  INFO 23400 --- [TicketBooking] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-10T14:46:20.594+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-10T14:46:20.663+05:30  INFO 23400 --- [TicketBooking] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-10T14:46:21.205+05:30  WARN 23400 --- [TicketBooking] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-10T14:46:21.266+05:30  WARN 23400 --- [TicketBooking] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-05-10T14:46:21.449+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'EVENTMANAGEMENT' URL not provided. Will try picking an instance via load-balancing.
+2025-05-10T14:46:21.535+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'USERREGISTRATION' URL not provided. Will try picking an instance via load-balancing.
+2025-05-10T14:46:22.364+05:30  INFO 23400 --- [TicketBooking] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-10T14:46:22.429+05:30  WARN 23400 --- [TicketBooking] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-10T14:46:22.518+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-05-10T14:46:22.551+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-05-10T14:46:22.559+05:30  INFO 23400 --- [TicketBooking] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-10T14:46:22.571+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-05-10T14:46:22.572+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-05-10T14:46:22.572+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-05-10T14:46:22.572+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-05-10T14:46:22.572+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-05-10T14:46:22.572+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-05-10T14:46:22.572+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-05-10T14:46:22.900+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-05-10T14:46:22.902+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-05-10T14:46:22.905+05:30  INFO 23400 --- [TicketBooking] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-05-10T14:46:22.906+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1746868582906 with initial instances count: 1
+2025-05-10T14:46:22.911+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application TICKETBOOKING with eureka with status UP
+2025-05-10T14:46:22.912+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746868582912, current=UP, previous=STARTING]
+2025-05-10T14:46:22.915+05:30  INFO 23400 --- [TicketBooking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETBOOKING/LTIN617400:TicketBooking:3032: registering service...
+2025-05-10T14:46:22.946+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 3032 (http) with context path '/'
+2025-05-10T14:46:22.948+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 3032
+2025-05-10T14:46:22.967+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.cts.TicketBookingApplication         : Started TicketBookingApplication in 1274.084 seconds (process running for 1275.276)
+2025-05-10T14:46:22.996+05:30  INFO 23400 --- [TicketBooking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETBOOKING/LTIN617400:TicketBooking:3032 - registration status: 204
+2025-05-10T14:51:22.581+05:30  INFO 23400 --- [TicketBooking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-10T14:56:22.589+05:30  INFO 23400 --- [TicketBooking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-10T15:01:22.592+05:30  INFO 23400 --- [TicketBooking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-10T15:06:22.594+05:30  INFO 23400 --- [TicketBooking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-10T15:11:22.596+05:30  INFO 23400 --- [TicketBooking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-10T15:16:22.601+05:30  INFO 23400 --- [TicketBooking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-10T15:21:01.300+05:30  WARN 23400 --- [TicketBooking] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m11s613ms122µs).
+2025-05-10T15:22:04.229+05:30  INFO 23400 --- [TicketBooking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-10T15:27:04.233+05:30  INFO 23400 --- [TicketBooking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-10T15:32:04.235+05:30  INFO 23400 --- [TicketBooking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-10T15:37:04.240+05:30  INFO 23400 --- [TicketBooking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-10T15:42:04.256+05:30  INFO 23400 --- [TicketBooking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-10T15:47:04.260+05:30  INFO 23400 --- [TicketBooking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-10T15:52:04.269+05:30  INFO 23400 --- [TicketBooking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-10T15:53:23.380+05:30  INFO 23400 --- [TicketBooking] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-05-10T15:53:23.385+05:30  INFO 23400 --- [TicketBooking] [Thread-1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application TICKETBOOKING with eureka with status DOWN
+2025-05-10T15:53:23.386+05:30  INFO 23400 --- [TicketBooking] [Thread-1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746872603386, current=DOWN, previous=UP]
+2025-05-10T15:53:23.386+05:30  INFO 23400 --- [TicketBooking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETBOOKING/LTIN617400:TicketBooking:3032: registering service...
+2025-05-10T15:53:23.395+05:30  INFO 23400 --- [TicketBooking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETBOOKING/LTIN617400:TicketBooking:3032 - registration status: 204
+2025-05-10T15:53:23.398+05:30  INFO 23400 --- [TicketBooking] [Thread-1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-10T15:53:23.406+05:30  INFO 23400 --- [TicketBooking] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-10T15:53:23.416+05:30  INFO 23400 --- [TicketBooking] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-10T15:53:23.428+05:30  INFO 23400 --- [TicketBooking] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-10T15:53:23.435+05:30  INFO 23400 --- [TicketBooking] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-10T15:53:23.436+05:30  INFO 23400 --- [TicketBooking] [Thread-1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-05-10T15:53:26.450+05:30  INFO 23400 --- [TicketBooking] [Thread-1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-05-10T15:53:26.467+05:30  INFO 23400 --- [TicketBooking] [Thread-1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETBOOKING/LTIN617400:TicketBooking:3032 - deregister  status: 200
+2025-05-10T15:53:26.468+05:30  INFO 23400 --- [TicketBooking] [Thread-1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-05-10T15:53:27.443+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.cts.TicketBookingApplication         : Starting TicketBookingApplication using Java 21.0.6 with PID 23400 (C:\Users\2401270\git\Em_project\TicketBooking\target\classes started by 2401270 in C:\Users\2401270\git\Em_project\TicketBooking)
+2025-05-10T15:53:27.444+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.cts.TicketBookingApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-05-10T15:53:27.448+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8083
+2025-05-10T15:53:27.448+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=TicketBooking, profiles=[default], label=null, version=7a833fc721876b5273d3e4e288ddb7b692088b6d, state=
+2025-05-10T15:53:27.742+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-10T15:53:27.742+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2025-05-10T15:53:27.753+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cts.repository.TicketBookingRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-05-10T15:53:27.753+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 JDBC repository interfaces.
+2025-05-10T15:53:27.758+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-10T15:53:27.758+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-10T15:53:27.773+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 1 JPA repository interface.
+2025-05-10T15:53:27.849+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c16f4aaf-366e-3c07-b82c-e3ed7e91ef65
+2025-05-10T15:53:28.008+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 3032 (http)
+2025-05-10T15:53:28.010+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-10T15:53:28.010+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-10T15:53:28.052+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-10T15:53:28.052+05:30  INFO 23400 --- [TicketBooking] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 604 ms
+2025-05-10T15:53:28.088+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-10T15:53:28.092+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-10T15:53:28.105+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-10T15:53:28.106+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-05-10T15:53:28.119+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@20df223e
+2025-05-10T15:53:28.120+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-05-10T15:53:28.123+05:30  WARN 23400 --- [TicketBooking] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-10T15:53:28.124+05:30  INFO 23400 --- [TicketBooking] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-10T15:53:28.176+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-10T15:53:28.189+05:30  INFO 23400 --- [TicketBooking] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-10T15:53:28.264+05:30  WARN 23400 --- [TicketBooking] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-10T15:53:28.279+05:30  WARN 23400 --- [TicketBooking] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-05-10T15:53:28.314+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'EVENTMANAGEMENT' URL not provided. Will try picking an instance via load-balancing.
+2025-05-10T15:53:28.337+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'USERREGISTRATION' URL not provided. Will try picking an instance via load-balancing.
+2025-05-10T15:53:28.478+05:30  INFO 23400 --- [TicketBooking] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-10T15:53:28.495+05:30  WARN 23400 --- [TicketBooking] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-10T15:53:28.519+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-05-10T15:53:28.522+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-05-10T15:53:28.522+05:30  INFO 23400 --- [TicketBooking] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-10T15:53:28.522+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-05-10T15:53:28.523+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-05-10T15:53:28.523+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-05-10T15:53:28.523+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-05-10T15:53:28.523+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-05-10T15:53:28.523+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-05-10T15:53:28.523+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-05-10T15:53:28.552+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-05-10T15:53:28.553+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-05-10T15:53:28.553+05:30  INFO 23400 --- [TicketBooking] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-05-10T15:53:28.553+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1746872608553 with initial instances count: 5
+2025-05-10T15:53:28.555+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application TICKETBOOKING with eureka with status UP
+2025-05-10T15:53:28.555+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746872608555, current=UP, previous=STARTING]
+2025-05-10T15:53:28.555+05:30  INFO 23400 --- [TicketBooking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETBOOKING/LTIN617400.cts.com:TicketBooking:3032: registering service...
+2025-05-10T15:53:28.560+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 3032 (http) with context path '/'
+2025-05-10T15:53:28.561+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 3032
+2025-05-10T15:53:28.569+05:30  INFO 23400 --- [TicketBooking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETBOOKING/LTIN617400.cts.com:TicketBooking:3032 - registration status: 204
+2025-05-10T15:53:28.569+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.cts.TicketBookingApplication         : Started TicketBookingApplication in 1.939 seconds (process running for 5300.878)
+2025-05-10T15:53:28.573+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-05-10T15:53:53.587+05:30  INFO 23400 --- [TicketBooking] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-05-10T15:53:53.589+05:30  INFO 23400 --- [TicketBooking] [Thread-7] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application TICKETBOOKING with eureka with status DOWN
+2025-05-10T15:53:53.589+05:30  INFO 23400 --- [TicketBooking] [Thread-7] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746872633589, current=DOWN, previous=UP]
+2025-05-10T15:53:53.589+05:30  INFO 23400 --- [TicketBooking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETBOOKING/LTIN617400.cts.com:TicketBooking:3032: registering service...
+2025-05-10T15:53:53.589+05:30  INFO 23400 --- [TicketBooking] [Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-10T15:53:53.596+05:30  INFO 23400 --- [TicketBooking] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-10T15:53:53.599+05:30  INFO 23400 --- [TicketBooking] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-10T15:53:53.599+05:30  INFO 23400 --- [TicketBooking] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-05-10T15:53:53.603+05:30  INFO 23400 --- [TicketBooking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETBOOKING/LTIN617400.cts.com:TicketBooking:3032 - registration status: 204
+2025-05-10T15:53:53.605+05:30  INFO 23400 --- [TicketBooking] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-05-10T15:53:53.605+05:30  INFO 23400 --- [TicketBooking] [Thread-7] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-05-10T15:53:56.609+05:30  INFO 23400 --- [TicketBooking] [Thread-7] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-05-10T15:53:56.626+05:30  INFO 23400 --- [TicketBooking] [Thread-7] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETBOOKING/LTIN617400.cts.com:TicketBooking:3032 - deregister  status: 200
+2025-05-10T15:53:56.626+05:30  INFO 23400 --- [TicketBooking] [Thread-7] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-05-10T15:53:57.481+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.cts.TicketBookingApplication         : Starting TicketBookingApplication using Java 21.0.6 with PID 23400 (C:\Users\2401270\git\Em_project\TicketBooking\target\classes started by 2401270 in C:\Users\2401270\git\Em_project\TicketBooking)
+2025-05-10T15:53:57.481+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.cts.TicketBookingApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-05-10T15:53:57.484+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8083
+2025-05-10T15:53:57.484+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=TicketBooking, profiles=[default], label=null, version=7a833fc721876b5273d3e4e288ddb7b692088b6d, state=
+2025-05-10T15:53:57.653+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-10T15:53:57.653+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2025-05-10T15:53:57.659+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cts.repository.TicketBookingRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-05-10T15:53:57.659+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JDBC repository interfaces.
+2025-05-10T15:53:57.662+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-10T15:53:57.662+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-10T15:53:57.668+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 1 JPA repository interface.
+2025-05-10T15:53:57.753+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c16f4aaf-366e-3c07-b82c-e3ed7e91ef65
+2025-05-10T15:53:57.812+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 3032 (http)
+2025-05-10T15:53:57.813+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-10T15:53:57.813+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-10T15:53:57.848+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-10T15:53:57.848+05:30  INFO 23400 --- [TicketBooking] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 364 ms
+2025-05-10T15:53:57.873+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-10T15:53:57.875+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-10T15:53:57.882+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-10T15:53:57.883+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-05-10T15:53:57.896+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@15be61c2
+2025-05-10T15:53:57.896+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-05-10T15:53:57.898+05:30  WARN 23400 --- [TicketBooking] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-10T15:53:57.898+05:30  INFO 23400 --- [TicketBooking] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-10T15:53:57.947+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-10T15:53:57.956+05:30  INFO 23400 --- [TicketBooking] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-10T15:53:58.014+05:30  WARN 23400 --- [TicketBooking] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-10T15:53:58.029+05:30  WARN 23400 --- [TicketBooking] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-05-10T15:53:58.056+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'EVENTMANAGEMENT' URL not provided. Will try picking an instance via load-balancing.
+2025-05-10T15:53:58.082+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'USERREGISTRATION' URL not provided. Will try picking an instance via load-balancing.
+2025-05-10T15:53:58.194+05:30  INFO 23400 --- [TicketBooking] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-10T15:53:58.201+05:30  WARN 23400 --- [TicketBooking] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-10T15:53:58.224+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-05-10T15:53:58.226+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-05-10T15:53:58.226+05:30  INFO 23400 --- [TicketBooking] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-10T15:53:58.226+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-05-10T15:53:58.226+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-05-10T15:53:58.226+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-05-10T15:53:58.226+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-05-10T15:53:58.226+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-05-10T15:53:58.226+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-05-10T15:53:58.226+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-05-10T15:53:58.245+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-05-10T15:53:58.246+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-05-10T15:53:58.246+05:30  INFO 23400 --- [TicketBooking] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-05-10T15:53:58.247+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1746872638246 with initial instances count: 5
+2025-05-10T15:53:58.248+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application TICKETBOOKING with eureka with status UP
+2025-05-10T15:53:58.248+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746872638248, current=UP, previous=STARTING]
+2025-05-10T15:53:58.248+05:30  INFO 23400 --- [TicketBooking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETBOOKING/LTIN617400.cts.com:TicketBooking:3032: registering service...
+2025-05-10T15:53:58.251+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 3032 (http) with context path '/'
+2025-05-10T15:53:58.252+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 3032
+2025-05-10T15:53:58.261+05:30  INFO 23400 --- [TicketBooking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETBOOKING/LTIN617400.cts.com:TicketBooking:3032 - registration status: 204
+2025-05-10T15:53:58.263+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.cts.TicketBookingApplication         : Started TicketBookingApplication in 1.562 seconds (process running for 5330.571)
+2025-05-10T15:53:58.265+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-05-10T15:58:17.012+05:30  INFO 23400 --- [TicketBooking] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-05-10T15:58:17.013+05:30  INFO 23400 --- [TicketBooking] [Thread-13] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application TICKETBOOKING with eureka with status DOWN
+2025-05-10T15:58:17.014+05:30  INFO 23400 --- [TicketBooking] [Thread-13] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746872897014, current=DOWN, previous=UP]
+2025-05-10T15:58:17.014+05:30  INFO 23400 --- [TicketBooking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETBOOKING/LTIN617400.cts.com:TicketBooking:3032: registering service...
+2025-05-10T15:58:17.014+05:30  INFO 23400 --- [TicketBooking] [Thread-13] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-10T15:58:17.019+05:30  INFO 23400 --- [TicketBooking] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-10T15:58:17.020+05:30  INFO 23400 --- [TicketBooking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETBOOKING/LTIN617400.cts.com:TicketBooking:3032 - registration status: 204
+2025-05-10T15:58:17.025+05:30  INFO 23400 --- [TicketBooking] [Thread-13] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-10T15:58:17.026+05:30  INFO 23400 --- [TicketBooking] [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2025-05-10T15:58:17.040+05:30  INFO 23400 --- [TicketBooking] [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2025-05-10T15:58:17.041+05:30  INFO 23400 --- [TicketBooking] [Thread-13] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-05-10T15:58:20.043+05:30  INFO 23400 --- [TicketBooking] [Thread-13] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-05-10T15:58:20.047+05:30  INFO 23400 --- [TicketBooking] [Thread-13] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETBOOKING/LTIN617400.cts.com:TicketBooking:3032 - deregister  status: 200
+2025-05-10T15:58:20.048+05:30  INFO 23400 --- [TicketBooking] [Thread-13] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-05-10T15:58:21.438+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.cts.TicketBookingApplication         : Starting TicketBookingApplication using Java 21.0.6 with PID 23400 (C:\Users\2401270\git\Em_project\TicketBooking\target\classes started by 2401270 in C:\Users\2401270\git\Em_project\TicketBooking)
+2025-05-10T15:58:21.439+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.cts.TicketBookingApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-05-10T15:58:21.443+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8083
+2025-05-10T15:58:21.443+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=TicketBooking, profiles=[default], label=null, version=7a833fc721876b5273d3e4e288ddb7b692088b6d, state=
+2025-05-10T15:58:21.731+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-10T15:58:21.732+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2025-05-10T15:58:21.738+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cts.repository.TicketBookingRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-05-10T15:58:21.739+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JDBC repository interfaces.
+2025-05-10T15:58:21.742+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-10T15:58:21.742+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-10T15:58:21.750+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 1 JPA repository interface.
+2025-05-10T15:58:21.815+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c16f4aaf-366e-3c07-b82c-e3ed7e91ef65
+2025-05-10T15:58:21.902+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 3032 (http)
+2025-05-10T15:58:21.911+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-10T15:58:21.911+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-10T15:58:21.985+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-10T15:58:21.985+05:30  INFO 23400 --- [TicketBooking] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 542 ms
+2025-05-10T15:58:22.020+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-10T15:58:22.022+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-10T15:58:22.029+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-10T15:58:22.030+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2025-05-10T15:58:22.040+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@af7493e
+2025-05-10T15:58:22.040+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2025-05-10T15:58:22.041+05:30  WARN 23400 --- [TicketBooking] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-10T15:58:22.042+05:30  INFO 23400 --- [TicketBooking] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-4)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-10T15:58:22.072+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-10T15:58:22.078+05:30  INFO 23400 --- [TicketBooking] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-10T15:58:22.133+05:30  WARN 23400 --- [TicketBooking] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-10T15:58:22.141+05:30  WARN 23400 --- [TicketBooking] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-05-10T15:58:22.161+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'EVENTMANAGEMENT' URL not provided. Will try picking an instance via load-balancing.
+2025-05-10T15:58:22.179+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'USERREGISTRATION' URL not provided. Will try picking an instance via load-balancing.
+2025-05-10T15:58:22.299+05:30  INFO 23400 --- [TicketBooking] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-10T15:58:22.308+05:30  WARN 23400 --- [TicketBooking] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-10T15:58:22.334+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-05-10T15:58:22.336+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-05-10T15:58:22.336+05:30  INFO 23400 --- [TicketBooking] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-10T15:58:22.336+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-05-10T15:58:22.336+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-05-10T15:58:22.336+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-05-10T15:58:22.336+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-05-10T15:58:22.336+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-05-10T15:58:22.336+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-05-10T15:58:22.336+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-05-10T15:58:22.355+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-05-10T15:58:22.356+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-05-10T15:58:22.356+05:30  INFO 23400 --- [TicketBooking] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-05-10T15:58:22.357+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1746872902357 with initial instances count: 5
+2025-05-10T15:58:22.359+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application TICKETBOOKING with eureka with status UP
+2025-05-10T15:58:22.359+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746872902359, current=UP, previous=STARTING]
+2025-05-10T15:58:22.359+05:30  INFO 23400 --- [TicketBooking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETBOOKING/LTIN617400.cts.com:TicketBooking:3032: registering service...
+2025-05-10T15:58:22.365+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 3032 (http) with context path '/'
+2025-05-10T15:58:22.366+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 3032
+2025-05-10T15:58:22.375+05:30  INFO 23400 --- [TicketBooking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETBOOKING/LTIN617400.cts.com:TicketBooking:3032 - registration status: 204
+2025-05-10T15:58:22.376+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.cts.TicketBookingApplication         : Started TicketBookingApplication in 2.238 seconds (process running for 5594.684)
+2025-05-10T15:58:22.377+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-05-10T15:58:55.066+05:30  INFO 23400 --- [TicketBooking] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-05-10T15:58:55.067+05:30  INFO 23400 --- [TicketBooking] [Thread-19] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application TICKETBOOKING with eureka with status DOWN
+2025-05-10T15:58:55.067+05:30  INFO 23400 --- [TicketBooking] [Thread-19] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746872935067, current=DOWN, previous=UP]
+2025-05-10T15:58:55.067+05:30  INFO 23400 --- [TicketBooking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETBOOKING/LTIN617400.cts.com:TicketBooking:3032: registering service...
+2025-05-10T15:58:55.068+05:30  INFO 23400 --- [TicketBooking] [Thread-19] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-10T15:58:55.071+05:30  INFO 23400 --- [TicketBooking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETBOOKING/LTIN617400.cts.com:TicketBooking:3032 - registration status: 204
+2025-05-10T15:58:55.074+05:30  INFO 23400 --- [TicketBooking] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-10T15:58:55.077+05:30  INFO 23400 --- [TicketBooking] [Thread-19] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-10T15:58:55.078+05:30  INFO 23400 --- [TicketBooking] [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2025-05-10T15:58:55.084+05:30  INFO 23400 --- [TicketBooking] [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2025-05-10T15:58:55.084+05:30  INFO 23400 --- [TicketBooking] [Thread-19] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-05-10T15:58:58.085+05:30  INFO 23400 --- [TicketBooking] [Thread-19] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-05-10T15:58:58.091+05:30  INFO 23400 --- [TicketBooking] [Thread-19] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETBOOKING/LTIN617400.cts.com:TicketBooking:3032 - deregister  status: 200
+2025-05-10T15:58:58.091+05:30  INFO 23400 --- [TicketBooking] [Thread-19] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-05-10T15:58:58.968+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.cts.TicketBookingApplication         : Starting TicketBookingApplication using Java 21.0.6 with PID 23400 (C:\Users\2401270\git\Em_project\TicketBooking\target\classes started by 2401270 in C:\Users\2401270\git\Em_project\TicketBooking)
+2025-05-10T15:58:58.969+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.cts.TicketBookingApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-05-10T15:58:58.970+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8083
+2025-05-10T15:58:58.970+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=TicketBooking, profiles=[default], label=null, version=7a833fc721876b5273d3e4e288ddb7b692088b6d, state=
+2025-05-10T15:58:59.125+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-10T15:58:59.125+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2025-05-10T15:58:59.131+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cts.repository.TicketBookingRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-05-10T15:58:59.131+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JDBC repository interfaces.
+2025-05-10T15:58:59.133+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-10T15:58:59.133+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-10T15:58:59.140+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 1 JPA repository interface.
+2025-05-10T15:58:59.194+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c16f4aaf-366e-3c07-b82c-e3ed7e91ef65
+2025-05-10T15:58:59.252+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 3032 (http)
+2025-05-10T15:58:59.253+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-10T15:58:59.253+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-10T15:58:59.328+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-10T15:58:59.328+05:30  INFO 23400 --- [TicketBooking] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 357 ms
+2025-05-10T15:58:59.362+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-10T15:58:59.364+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-10T15:58:59.373+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-10T15:58:59.373+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2025-05-10T15:58:59.387+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3fdc3583
+2025-05-10T15:58:59.387+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2025-05-10T15:58:59.388+05:30  WARN 23400 --- [TicketBooking] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-10T15:58:59.388+05:30  INFO 23400 --- [TicketBooking] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-5)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-10T15:58:59.426+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-10T15:58:59.434+05:30  INFO 23400 --- [TicketBooking] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-10T15:58:59.487+05:30  WARN 23400 --- [TicketBooking] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-10T15:58:59.498+05:30  WARN 23400 --- [TicketBooking] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-05-10T15:58:59.515+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'EVENTMANAGEMENT' URL not provided. Will try picking an instance via load-balancing.
+2025-05-10T15:58:59.529+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'USERREGISTRATION' URL not provided. Will try picking an instance via load-balancing.
+2025-05-10T15:58:59.644+05:30  INFO 23400 --- [TicketBooking] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-10T15:58:59.657+05:30  WARN 23400 --- [TicketBooking] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-10T15:58:59.673+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-05-10T15:58:59.674+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-05-10T15:58:59.674+05:30  INFO 23400 --- [TicketBooking] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-10T15:58:59.674+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-05-10T15:58:59.674+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-05-10T15:58:59.674+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-05-10T15:58:59.674+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-05-10T15:58:59.674+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-05-10T15:58:59.674+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-05-10T15:58:59.674+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-05-10T15:58:59.692+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-05-10T15:58:59.693+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-05-10T15:58:59.693+05:30  INFO 23400 --- [TicketBooking] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-05-10T15:58:59.693+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1746872939693 with initial instances count: 5
+2025-05-10T15:58:59.695+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application TICKETBOOKING with eureka with status UP
+2025-05-10T15:58:59.695+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746872939695, current=UP, previous=STARTING]
+2025-05-10T15:58:59.695+05:30  INFO 23400 --- [TicketBooking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETBOOKING/LTIN617400.cts.com:TicketBooking:3032: registering service...
+2025-05-10T15:58:59.699+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 3032 (http) with context path '/'
+2025-05-10T15:58:59.700+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 3032
+2025-05-10T15:58:59.707+05:30  INFO 23400 --- [TicketBooking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETBOOKING/LTIN617400.cts.com:TicketBooking:3032 - registration status: 204
+2025-05-10T15:58:59.711+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.cts.TicketBookingApplication         : Started TicketBookingApplication in 1.536 seconds (process running for 5632.02)
+2025-05-10T15:58:59.714+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-05-10T16:03:59.676+05:30  INFO 23400 --- [TicketBooking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-10T16:08:59.689+05:30  INFO 23400 --- [TicketBooking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-10T16:09:26.548+05:30  INFO 23400 --- [TicketBooking] [http-nio-3032-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-10T16:09:26.549+05:30  INFO 23400 --- [TicketBooking] [http-nio-3032-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-10T16:09:26.550+05:30  INFO 23400 --- [TicketBooking] [http-nio-3032-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-05-10T16:09:26.613+05:30  INFO 23400 --- [TicketBooking] [http-nio-3032-exec-1] c.cts.service.TicketBookingServiceImpl   : Fetching all tickets
+2025-05-10T16:09:39.906+05:30  INFO 23400 --- [TicketBooking] [http-nio-3032-exec-5] c.cts.service.TicketBookingServiceImpl   : Booking ticket for event ID: 1 and user ID: 2
+2025-05-10T16:09:40.375+05:30  INFO 23400 --- [TicketBooking] [http-nio-3032-exec-5] c.cts.service.TicketBookingServiceImpl   : Decreased ticket count for event ID: 1
+2025-05-10T16:09:40.389+05:30  INFO 23400 --- [TicketBooking] [http-nio-3032-exec-5] c.cts.service.TicketBookingServiceImpl   : Sending email to: ajaymamundi@gmail.com
+2025-05-10T16:09:44.457+05:30  INFO 23400 --- [TicketBooking] [http-nio-3032-exec-5] c.cts.service.TicketBookingServiceImpl   : Email sent to: ajaymamundi@gmail.com
+2025-05-10T16:09:44.457+05:30  INFO 23400 --- [TicketBooking] [http-nio-3032-exec-5] c.cts.service.TicketBookingServiceImpl   : Sent email to user ID: 2
+2025-05-10T16:09:44.603+05:30  INFO 23400 --- [TicketBooking] [http-nio-3032-exec-5] c.cts.service.TicketBookingServiceImpl   : Ticket booked successfully for event ID: 1 and user ID: 2
+2025-05-10T16:10:25.261+05:30  INFO 23400 --- [TicketBooking] [http-nio-3032-exec-4] c.cts.service.TicketBookingServiceImpl   : Fetching all tickets
+2025-05-10T16:13:59.697+05:30  INFO 23400 --- [TicketBooking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-10T16:18:59.707+05:30  INFO 23400 --- [TicketBooking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-10T16:23:06.301+05:30  INFO 23400 --- [TicketBooking] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2025-05-10T16:23:06.302+05:30  INFO 23400 --- [TicketBooking] [Thread-25] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application TICKETBOOKING with eureka with status DOWN
+2025-05-10T16:23:06.302+05:30  INFO 23400 --- [TicketBooking] [Thread-25] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746874386302, current=DOWN, previous=UP]
+2025-05-10T16:23:06.303+05:30  INFO 23400 --- [TicketBooking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETBOOKING/LTIN617400.cts.com:TicketBooking:3032: registering service...
+2025-05-10T16:23:06.304+05:30  INFO 23400 --- [TicketBooking] [Thread-25] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-10T16:23:06.309+05:30  INFO 23400 --- [TicketBooking] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-10T16:23:06.313+05:30  INFO 23400 --- [TicketBooking] [Thread-25] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-10T16:23:06.313+05:30  INFO 23400 --- [TicketBooking] [Thread-25] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2025-05-10T16:23:06.317+05:30  INFO 23400 --- [TicketBooking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETBOOKING/LTIN617400.cts.com:TicketBooking:3032 - registration status: 204
+2025-05-10T16:23:06.322+05:30  INFO 23400 --- [TicketBooking] [Thread-25] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2025-05-10T16:23:06.322+05:30  INFO 23400 --- [TicketBooking] [Thread-25] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-05-10T16:23:09.327+05:30  INFO 23400 --- [TicketBooking] [Thread-25] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-05-10T16:23:09.344+05:30  INFO 23400 --- [TicketBooking] [Thread-25] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETBOOKING/LTIN617400.cts.com:TicketBooking:3032 - deregister  status: 200
+2025-05-10T16:23:09.345+05:30  INFO 23400 --- [TicketBooking] [Thread-25] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-05-10T16:23:10.316+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.cts.TicketBookingApplication         : Starting TicketBookingApplication using Java 21.0.6 with PID 23400 (C:\Users\2401270\git\Em_project\TicketBooking\target\classes started by 2401270 in C:\Users\2401270\git\Em_project\TicketBooking)
+2025-05-10T16:23:10.317+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.cts.TicketBookingApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-05-10T16:23:10.318+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8083
+2025-05-10T16:23:10.319+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=TicketBooking, profiles=[default], label=null, version=7a833fc721876b5273d3e4e288ddb7b692088b6d, state=
+2025-05-10T16:23:10.557+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-10T16:23:10.557+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2025-05-10T16:23:10.570+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cts.repository.TicketBookingRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-05-10T16:23:10.570+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 JDBC repository interfaces.
+2025-05-10T16:23:10.573+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-10T16:23:10.573+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-10T16:23:10.582+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 1 JPA repository interface.
+2025-05-10T16:23:10.650+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c16f4aaf-366e-3c07-b82c-e3ed7e91ef65
+2025-05-10T16:23:10.713+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 3032 (http)
+2025-05-10T16:23:10.714+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-10T16:23:10.714+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-10T16:23:10.796+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-10T16:23:10.796+05:30  INFO 23400 --- [TicketBooking] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 477 ms
+2025-05-10T16:23:10.823+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-10T16:23:10.825+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-10T16:23:10.837+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-10T16:23:10.838+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2025-05-10T16:23:10.856+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection com.mysql.cj.jdbc.ConnectionImpl@139277f2
+2025-05-10T16:23:10.857+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2025-05-10T16:23:10.858+05:30  WARN 23400 --- [TicketBooking] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-10T16:23:10.859+05:30  INFO 23400 --- [TicketBooking] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-6)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-10T16:23:10.912+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-10T16:23:10.921+05:30  INFO 23400 --- [TicketBooking] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-10T16:23:10.991+05:30  WARN 23400 --- [TicketBooking] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-10T16:23:11.004+05:30  WARN 23400 --- [TicketBooking] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-05-10T16:23:11.031+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'EVENTMANAGEMENT' URL not provided. Will try picking an instance via load-balancing.
+2025-05-10T16:23:11.052+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'USERREGISTRATION' URL not provided. Will try picking an instance via load-balancing.
+2025-05-10T16:23:11.246+05:30  INFO 23400 --- [TicketBooking] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-10T16:23:11.255+05:30  WARN 23400 --- [TicketBooking] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-10T16:23:11.274+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-05-10T16:23:11.277+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-05-10T16:23:11.277+05:30  INFO 23400 --- [TicketBooking] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-10T16:23:11.277+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-05-10T16:23:11.277+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-05-10T16:23:11.277+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-05-10T16:23:11.277+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-05-10T16:23:11.277+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-05-10T16:23:11.277+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-05-10T16:23:11.278+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-05-10T16:23:11.311+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-05-10T16:23:11.312+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-05-10T16:23:11.313+05:30  INFO 23400 --- [TicketBooking] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-05-10T16:23:11.313+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1746874391313 with initial instances count: 5
+2025-05-10T16:23:11.315+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application TICKETBOOKING with eureka with status UP
+2025-05-10T16:23:11.315+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746874391315, current=UP, previous=STARTING]
+2025-05-10T16:23:11.315+05:30  INFO 23400 --- [TicketBooking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETBOOKING/LTIN617400.cts.com:TicketBooking:3032: registering service...
+2025-05-10T16:23:11.319+05:30  INFO 23400 --- [TicketBooking] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 3032 (http) with context path '/'
+2025-05-10T16:23:11.319+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 3032
+2025-05-10T16:23:11.330+05:30  INFO 23400 --- [TicketBooking] [restartedMain] com.cts.TicketBookingApplication         : Started TicketBookingApplication in 1.906 seconds (process running for 7083.638)
+2025-05-10T16:23:11.330+05:30  INFO 23400 --- [TicketBooking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETBOOKING/LTIN617400.cts.com:TicketBooking:3032 - registration status: 204
+2025-05-10T16:23:11.332+05:30  INFO 23400 --- [TicketBooking] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-05-10T16:23:22.648+05:30  INFO 23400 --- [TicketBooking] [RMI TCP Connection(137)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-05-10T16:23:22.649+05:30  INFO 23400 --- [TicketBooking] [RMI TCP Connection(137)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application TICKETBOOKING with eureka with status DOWN
+2025-05-10T16:23:22.649+05:30  INFO 23400 --- [TicketBooking] [RMI TCP Connection(137)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746874402649, current=DOWN, previous=UP]
+2025-05-10T16:23:22.649+05:30  INFO 23400 --- [TicketBooking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETBOOKING/LTIN617400.cts.com:TicketBooking:3032: registering service...
+2025-05-10T16:23:22.650+05:30  INFO 23400 --- [TicketBooking] [RMI TCP Connection(137)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-10T16:23:22.654+05:30  INFO 23400 --- [TicketBooking] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-10T16:23:22.659+05:30  INFO 23400 --- [TicketBooking] [RMI TCP Connection(137)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-10T16:23:22.660+05:30  INFO 23400 --- [TicketBooking] [RMI TCP Connection(137)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2025-05-10T16:23:22.666+05:30  INFO 23400 --- [TicketBooking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETBOOKING/LTIN617400.cts.com:TicketBooking:3032 - registration status: 204
+2025-05-10T16:23:22.667+05:30  INFO 23400 --- [TicketBooking] [RMI TCP Connection(137)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2025-05-10T16:23:22.668+05:30  INFO 23400 --- [TicketBooking] [RMI TCP Connection(137)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-05-10T16:23:25.676+05:30  INFO 23400 --- [TicketBooking] [RMI TCP Connection(137)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-05-10T16:23:25.694+05:30  INFO 23400 --- [TicketBooking] [RMI TCP Connection(137)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETBOOKING/LTIN617400.cts.com:TicketBooking:3032 - deregister  status: 200
+2025-05-10T16:23:25.694+05:30  INFO 23400 --- [TicketBooking] [RMI TCP Connection(137)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-05-10T16:23:34.465+05:30  INFO 14464 --- [TicketBooking] [restartedMain] com.cts.TicketBookingApplication         : Starting TicketBookingApplication using Java 21.0.6 with PID 14464 (C:\Users\2401270\git\Em_project\TicketBooking\target\classes started by 2401270 in C:\Users\2401270\git\Em_project\TicketBooking)
+2025-05-10T16:23:34.468+05:30  INFO 14464 --- [TicketBooking] [restartedMain] com.cts.TicketBookingApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-05-10T16:23:34.538+05:30  INFO 14464 --- [TicketBooking] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8083
+2025-05-10T16:23:34.538+05:30  INFO 14464 --- [TicketBooking] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=TicketBooking, profiles=[default], label=null, version=7a833fc721876b5273d3e4e288ddb7b692088b6d, state=
+2025-05-10T16:23:34.540+05:30  INFO 14464 --- [TicketBooking] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-10T16:23:34.541+05:30  INFO 14464 --- [TicketBooking] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-10T16:23:35.380+05:30  INFO 14464 --- [TicketBooking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-10T16:23:35.380+05:30  INFO 14464 --- [TicketBooking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2025-05-10T16:23:35.412+05:30  INFO 14464 --- [TicketBooking] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cts.repository.TicketBookingRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-05-10T16:23:35.412+05:30  INFO 14464 --- [TicketBooking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 0 JDBC repository interfaces.
+2025-05-10T16:23:35.423+05:30  INFO 14464 --- [TicketBooking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-10T16:23:35.425+05:30  INFO 14464 --- [TicketBooking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-10T16:23:35.541+05:30  INFO 14464 --- [TicketBooking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 109 ms. Found 1 JPA repository interface.
+2025-05-10T16:23:35.764+05:30  INFO 14464 --- [TicketBooking] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c16f4aaf-366e-3c07-b82c-e3ed7e91ef65
+2025-05-10T16:23:36.275+05:30  INFO 14464 --- [TicketBooking] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 3032 (http)
+2025-05-10T16:23:36.293+05:30  INFO 14464 --- [TicketBooking] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-10T16:23:36.293+05:30  INFO 14464 --- [TicketBooking] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-10T16:23:36.360+05:30  INFO 14464 --- [TicketBooking] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-10T16:23:36.361+05:30  INFO 14464 --- [TicketBooking] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1817 ms
+2025-05-10T16:23:36.535+05:30  INFO 14464 --- [TicketBooking] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-10T16:23:36.615+05:30  INFO 14464 --- [TicketBooking] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-10T16:23:36.660+05:30  INFO 14464 --- [TicketBooking] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-10T16:23:36.977+05:30  INFO 14464 --- [TicketBooking] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-10T16:23:37.025+05:30  INFO 14464 --- [TicketBooking] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-10T16:23:37.320+05:30  INFO 14464 --- [TicketBooking] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@79df9281
+2025-05-10T16:23:37.326+05:30  INFO 14464 --- [TicketBooking] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-10T16:23:37.393+05:30  WARN 14464 --- [TicketBooking] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-10T16:23:37.418+05:30  INFO 14464 --- [TicketBooking] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-10T16:23:38.607+05:30  INFO 14464 --- [TicketBooking] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-10T16:23:38.682+05:30  INFO 14464 --- [TicketBooking] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-10T16:23:39.138+05:30  WARN 14464 --- [TicketBooking] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-10T16:23:39.211+05:30  WARN 14464 --- [TicketBooking] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-05-10T16:23:39.384+05:30  INFO 14464 --- [TicketBooking] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'EVENTMANAGEMENT' URL not provided. Will try picking an instance via load-balancing.
+2025-05-10T16:23:39.463+05:30  INFO 14464 --- [TicketBooking] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'USERREGISTRATION' URL not provided. Will try picking an instance via load-balancing.
+2025-05-10T16:23:40.079+05:30  INFO 14464 --- [TicketBooking] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-10T16:23:40.107+05:30  WARN 14464 --- [TicketBooking] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-10T16:23:40.170+05:30  INFO 14464 --- [TicketBooking] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-05-10T16:23:40.196+05:30  INFO 14464 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-05-10T16:23:40.202+05:30  INFO 14464 --- [TicketBooking] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-10T16:23:40.211+05:30  INFO 14464 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-05-10T16:23:40.211+05:30  INFO 14464 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-05-10T16:23:40.211+05:30  INFO 14464 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-05-10T16:23:40.211+05:30  INFO 14464 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-05-10T16:23:40.212+05:30  INFO 14464 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-05-10T16:23:40.212+05:30  INFO 14464 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-05-10T16:23:40.212+05:30  INFO 14464 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-05-10T16:23:40.521+05:30  INFO 14464 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-05-10T16:23:40.523+05:30  INFO 14464 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-05-10T16:23:40.525+05:30  INFO 14464 --- [TicketBooking] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-05-10T16:23:40.526+05:30  INFO 14464 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1746874420526 with initial instances count: 4
+2025-05-10T16:23:40.532+05:30  INFO 14464 --- [TicketBooking] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application TICKETBOOKING with eureka with status UP
+2025-05-10T16:23:40.533+05:30  INFO 14464 --- [TicketBooking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746874420533, current=UP, previous=STARTING]
+2025-05-10T16:23:40.535+05:30  INFO 14464 --- [TicketBooking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETBOOKING/LTIN617400.cts.com:TicketBooking:3032: registering service...
+2025-05-10T16:23:40.580+05:30  INFO 14464 --- [TicketBooking] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 3032 (http) with context path '/'
+2025-05-10T16:23:40.581+05:30  INFO 14464 --- [TicketBooking] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 3032
+2025-05-10T16:23:40.594+05:30  INFO 14464 --- [TicketBooking] [restartedMain] com.cts.TicketBookingApplication         : Started TicketBookingApplication in 7.641 seconds (process running for 8.555)
+2025-05-10T16:23:40.614+05:30  INFO 14464 --- [TicketBooking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETBOOKING/LTIN617400.cts.com:TicketBooking:3032 - registration status: 204

@@ -44,17 +44,9 @@ public class TicketBookingServiceImpl implements TicketBookingService {
 
         // Check if the event exists
         EventManagement eventDetails = eventClient.getEventById(ticket.getEventId());
-        if (eventDetails == null) {
-            logger.error("Event not found with ID: {}", ticket.getEventId());
-            throw new RuntimeException("Event not found with id: " + ticket.getEventId());
-        }
 
         // Check if the user exists
         UserRegistration userDetails = userClient.getUserById(ticket.getUserId());
-        if (userDetails == null) {
-            logger.error("User not found with ID: {}", ticket.getUserId());
-            throw new RuntimeException("User not found with id: " + ticket.getUserId());
-        }
 
         // Decrease ticket count in Event Management
         eventClient.decreaseTicketCount(ticket.getEventId());
@@ -97,12 +89,15 @@ public class TicketBookingServiceImpl implements TicketBookingService {
     @Override
     public List<TicketBooking> getTicketsByUserId(int userId) {
         logger.info("Fetching tickets for user ID: {}", userId);
+        UserRegistration userDetails = userClient.getUserById(userId);
         return repository.findByUserId(userId);
     }
 
     @Override
     public List<TicketBooking> getTicketsByEventId(int eventId) {
         logger.info("Fetching tickets for event ID: {}", eventId);
+        EventManagement eventDetails = eventClient.getEventById(eventId);
+
         return repository.findByEventId(eventId);
     }
 

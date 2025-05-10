@@ -1,5 +1,6 @@
 package com.cts.controller;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.cts.exceptions.EventNotFoundException;
+import com.cts.exceptions.InvalidDataException;
 import com.cts.model.EventManagement;
 import com.cts.service.EventManagementService;
 
@@ -24,7 +26,7 @@ public class EventManagementController {
 	private EventManagementService service;
 
 	@PostMapping("/saveevent")
-	public String saveEvent(@RequestBody EventManagement event) {
+	public String saveEvent(@RequestBody EventManagement event) throws InvalidDataException {
 		return service.saveEvent(event);
 	}
 
@@ -34,7 +36,7 @@ public class EventManagementController {
 	}
 
 	@PutMapping("/updateevent/{eid}")
-	public String updateEvent(@PathVariable("eid") int id, @RequestBody EventManagement updatedEvent) {
+	public String updateEvent(@PathVariable("eid") int id, @RequestBody EventManagement updatedEvent) throws InvalidDataException {
 		return service.updateEvent(id, updatedEvent);
 
 	}
@@ -56,22 +58,22 @@ public class EventManagementController {
 	}
 
 	@PostMapping("decreaseTicketCount/{id}")
-	public void decreaseTicketCount(@PathVariable("id") int id) {
+	public void decreaseTicketCount(@PathVariable("id") int id) throws EventNotFoundException {
 		service.decreaseTicketCount(id);
 	}
 
 	@PostMapping("increaseTicketCount/{id}")
-	public void increaseTicketCount(@PathVariable("id") int id) {
+	public void increaseTicketCount(@PathVariable("id") int id) throws EventNotFoundException {
 		service.increaseTicketCount(id);
 	}
 
 	@GetMapping("/fetcheventbylocation/{location}")
-	public List<EventManagement> getEventByLocation(@PathVariable("location") String location) throws Exception {
+	public List<EventManagement> getEventByLocation(@PathVariable("location") String location) throws EventNotFoundException {
 		return service.getEventByLocation(location);
 	}
 
 	@GetMapping("/fetcheventbydate/{date}")
-	public List<EventManagement> getEventByDate(@PathVariable("date") String date) throws Exception {
+	public List<EventManagement> getEventByDate(@PathVariable("date") String date) throws EventNotFoundException, ParseException {
 
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 		Date formattedDate = formatter.parse(date);

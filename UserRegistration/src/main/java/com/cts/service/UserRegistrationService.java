@@ -2,6 +2,7 @@ package com.cts.service;
 
 import java.util.*;
 
+import com.cts.exceptions.InvalidDataException;
 import com.cts.exceptions.UserNotFoundException;
 import com.cts.model.UserRegistration;
 
@@ -11,7 +12,7 @@ public interface UserRegistrationService {
 
 	public abstract UserRegistration getUserById(int id) throws UserNotFoundException;
 
-	public abstract UserRegistration saveUser(UserRegistration user);
+	public abstract UserRegistration saveUser(UserRegistration user) throws InvalidDataException;
 
 	public abstract String updateUser(int id, UserRegistration updatedUser);
 

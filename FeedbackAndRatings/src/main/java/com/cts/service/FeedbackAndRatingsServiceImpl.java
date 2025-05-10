@@ -39,10 +39,6 @@ public class FeedbackAndRatingsServiceImpl implements FeedbackAndRatingsService 
 
         // Check if the event exists
         EventManagement eventId = eventClient.getEventById(feedback.getEventId());
-        if (eventId == null) {
-            logger.error("Event not found with ID: {}", feedback.getEventId());
-            return "Enter valid EventId";
-        }
 
         // Check if the user exists
         UserRegistration userId = userClient.getUserById(feedback.getUserId());
@@ -63,23 +59,22 @@ public class FeedbackAndRatingsServiceImpl implements FeedbackAndRatingsService 
     public String updateFeedback(int feedbackId, FeedbackAndRatings feedback)
             throws FeedbackAndRatingsNotFoundException {
         logger.info("Updating feedback with ID: {}", feedbackId);
-        Optional<FeedbackAndRatings> existingFeedback = repository.findById(feedbackId);
-        if (existingFeedback.isPresent()) {
-            FeedbackAndRatings updatedFeedback = existingFeedback.get();
-            updatedFeedback.setRating(feedback.getRating());
-            updatedFeedback.setComments(feedback.getComments());
-            repository.save(updatedFeedback);
-            logger.info("Feedback updated successfully with ID: {}", feedbackId);
-            return "Feedback updated successfully";
-        } else {
-            logger.error("Feedback not found with ID: {}", feedbackId);
-            throw new FeedbackAndRatingsNotFoundException(feedbackId);
-        }
+        FeedbackAndRatings existingFeedback = getFeedbackById(feedbackId);
+        FeedbackAndRatings updatedFeedback = existingFeedback;
+        updatedFeedback.setRating(feedback.getRating());
+        updatedFeedback.setComments(feedback.getComments());
+        repository.save(updatedFeedback);
+        logger.info("Feedback updated successfully with ID: {}", feedbackId);
+        return "Feedback updated successfully";
+  
     }
 
 
     @Override
-    public String deleteFeedback(int feedbackId) {
+    public String deleteFeedback(int feedbackId) throws FeedbackAndRatingsNotFoundException {
+    	
+    	FeedbackAndRatings feedback = getFeedbackById(feedbackId);
+    	
         logger.info("Deleting feedback with ID: {}", feedbackId);
         repository.deleteById(feedbackId);
         logger.info("Feedback deleted successfully with ID: {}", feedbackId);
@@ -96,17 +91,9 @@ public class FeedbackAndRatingsServiceImpl implements FeedbackAndRatingsService 
             return optional.get();
         } else {
             logger.error("Feedback not found with ID: {}", feedbackId);
-            throw new FeedbackAndRatingsNotFoundException(feedbackId);
+            throw new FeedbackAndRatingsNotFoundException("Feedback not found with id: " + feedbackId);
         }
     }
-
-
-    @Override
-    public List<FeedbackAndRatings> getAllFeedbacksByUser(int userId) {
-        logger.info("Fetching all feedbacks for user ID: {}", userId);
-        return repository.findByUserId(userId);
-    }
-
 
     @Override
     public List<FeedbackAndRatings> getAllFeedbacksByEvent(int eventId) {

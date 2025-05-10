@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import com.cts.exceptions.InvalidDataException;
 import com.cts.exceptions.UserNotFoundException;
 import com.cts.model.UserRegistration;
 import com.cts.service.UserRegistrationService;
@@ -17,7 +18,7 @@ public class UserRegistrationController {
     private UserRegistrationService userService;
 
     @PostMapping("/signup")
-    public UserRegistration signup(@RequestBody UserRegistration user) {
+    public UserRegistration signup(@RequestBody UserRegistration user) throws InvalidDataException {
         return userService.saveUser(user);
     }
 
@@ -38,7 +39,7 @@ public class UserRegistrationController {
     }
 
     @PostMapping("/save")
-    public UserRegistration createUser(@RequestBody UserRegistration user) {
+    public UserRegistration createUser(@RequestBody UserRegistration user) throws InvalidDataException {
         return userService.saveUser(user);
     }
 

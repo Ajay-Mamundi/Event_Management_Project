@@ -34,7 +34,7 @@ public class FeedbackAndRatingsController {
 	}
 
 	@DeleteMapping("/delete/{id}")
-	public String deleteFeedback(@PathVariable("id") int id) {
+	public String deleteFeedback(@PathVariable("id") int id) throws FeedbackAndRatingsNotFoundException {
 		return service.deleteFeedback(id);
 	}
 
@@ -43,10 +43,6 @@ public class FeedbackAndRatingsController {
 		return service.getFeedbackById(id);
 	}
 
-	@GetMapping("/getfeedbackbyuserid/{userid}")
-	public List<FeedbackAndRatings> getAllFeedbacksByUser(@PathVariable("userid") int userId) {
-		return service.getAllFeedbacksByUser(userId);
-	}
 
 	@GetMapping("/getfeedbackbyeventid/{eventid}")
 	public List<FeedbackAndRatings> getAllFeedbacksByEvent(@PathVariable("eventid") int eventId) {

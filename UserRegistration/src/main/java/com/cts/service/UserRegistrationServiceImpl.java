@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.cts.exceptions.InvalidDataException;
 import com.cts.exceptions.UserNotFoundException;
 import com.cts.model.UserRegistration;
 import com.cts.repository.UserRegistrationRepository;
@@ -39,9 +40,15 @@ public class UserRegistrationServiceImpl implements UserRegistrationService {
     }
 
     @Override
-    public UserRegistration saveUser(UserRegistration user) {
+    public UserRegistration saveUser(UserRegistration user) throws InvalidDataException {
         logger.info("Saving user: {}", user);
-        return repository.save(user);
+        UserRegistration u = repository.save(user);
+        if(u!=null) {
+        	return u;
+        }
+        else {
+        	throw new InvalidDataException("Invalid user data...");
+        }
     }
 
     @Override
