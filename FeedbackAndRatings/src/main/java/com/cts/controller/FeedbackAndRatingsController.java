@@ -43,13 +43,12 @@ public class FeedbackAndRatingsController {
 		return service.getFeedbackById(id);
 	}
 
-
 	@GetMapping("/getfeedbackbyeventid/{eventid}")
 	public List<FeedbackAndRatings> getAllFeedbacksByEvent(@PathVariable("eventid") int eventId) {
 		return service.getAllFeedbacksByEvent(eventId);
 	}
 
-	@GetMapping("/eventavg/{eventid}/average-rating")
+	@GetMapping("/eventavg/{eventid}")
 	public Double getAverageRatingForEvent(@PathVariable("eventid") int eventId) {
 		return service.getAverageRatingForEvent(eventId);
 	}

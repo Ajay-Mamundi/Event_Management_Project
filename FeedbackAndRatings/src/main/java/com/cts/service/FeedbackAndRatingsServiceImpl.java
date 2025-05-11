@@ -105,8 +105,10 @@ public class FeedbackAndRatingsServiceImpl implements FeedbackAndRatingsService 
     @Override
     public Double getAverageRatingForEvent(int eventId) {
         logger.info("Fetching average rating for event ID: {}", eventId);
-        return repository.findAverageRatingByEventId(eventId);
+        Double avgRating =  repository.findAverageRatingByEventId(eventId);
+        return (avgRating != null) ? avgRating : 0.0;
     }
+ 
 
   
     @Override
