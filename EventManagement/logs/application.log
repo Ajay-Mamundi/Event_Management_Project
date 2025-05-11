@@ -63,3 +63,86 @@
 2025-05-11T19:29:07.266+05:30  INFO 6564 --- [EventManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2025-05-11T19:34:07.277+05:30  INFO 6564 --- [EventManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2025-05-11T19:39:07.289+05:30  INFO 6564 --- [EventManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-11T19:41:19.942+05:30  INFO 6564 --- [EventManagement] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2025-05-11T19:41:19.950+05:30  INFO 6564 --- [EventManagement] [Thread-1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application EVENTMANAGEMENT with eureka with status DOWN
+2025-05-11T19:41:19.951+05:30  INFO 6564 --- [EventManagement] [Thread-1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746972679951, current=DOWN, previous=UP]
+2025-05-11T19:41:19.952+05:30  INFO 6564 --- [EventManagement] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EVENTMANAGEMENT/LTIN617400.cts.com:EventManagement:3030: registering service...
+2025-05-11T19:41:19.962+05:30  INFO 6564 --- [EventManagement] [Thread-1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-11T19:41:19.981+05:30  INFO 6564 --- [EventManagement] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-11T19:41:19.987+05:30  INFO 6564 --- [EventManagement] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EVENTMANAGEMENT/LTIN617400.cts.com:EventManagement:3030 - registration status: 204
+2025-05-11T19:41:20.000+05:30  INFO 6564 --- [EventManagement] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-11T19:41:20.010+05:30  INFO 6564 --- [EventManagement] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-11T19:41:20.032+05:30  INFO 6564 --- [EventManagement] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-11T19:41:20.034+05:30  INFO 6564 --- [EventManagement] [Thread-1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-05-11T19:41:23.042+05:30  INFO 6564 --- [EventManagement] [Thread-1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-05-11T19:41:23.061+05:30  INFO 6564 --- [EventManagement] [Thread-1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EVENTMANAGEMENT/LTIN617400.cts.com:EventManagement:3030 - deregister  status: 200
+2025-05-11T19:41:23.063+05:30  INFO 6564 --- [EventManagement] [Thread-1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-05-11T19:41:24.487+05:30  INFO 6564 --- [EventManagement] [restartedMain] com.cts.EventManagementApplication       : Starting EventManagementApplication using Java 21.0.6 with PID 6564 (C:\Users\2401270\git\Em_project\EventManagement\target\classes started by 2401270 in C:\Users\2401270\git\Em_project\EventManagement)
+2025-05-11T19:41:24.488+05:30  INFO 6564 --- [EventManagement] [restartedMain] com.cts.EventManagementApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-05-11T19:41:24.492+05:30  INFO 6564 --- [EventManagement] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8083
+2025-05-11T19:41:24.493+05:30  INFO 6564 --- [EventManagement] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=EventManagement, profiles=[default], label=null, version=7a833fc721876b5273d3e4e288ddb7b692088b6d, state=
+2025-05-11T19:41:25.488+05:30  INFO 6564 --- [EventManagement] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-11T19:41:25.559+05:30  INFO 6564 --- [EventManagement] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 1 JPA repository interface.
+2025-05-11T19:41:25.980+05:30  INFO 6564 --- [EventManagement] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8c209807-e3e6-3f31-ae4c-415fbc736300
+2025-05-11T19:41:26.349+05:30  INFO 6564 --- [EventManagement] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 3030 (http)
+2025-05-11T19:41:26.356+05:30  INFO 6564 --- [EventManagement] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-11T19:41:26.358+05:30  INFO 6564 --- [EventManagement] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-11T19:41:26.534+05:30  INFO 6564 --- [EventManagement] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-11T19:41:26.534+05:30  INFO 6564 --- [EventManagement] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2041 ms
+2025-05-11T19:41:26.656+05:30  INFO 6564 --- [EventManagement] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-11T19:41:26.666+05:30  INFO 6564 --- [EventManagement] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-11T19:41:26.707+05:30  INFO 6564 --- [EventManagement] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-11T19:41:26.713+05:30  INFO 6564 --- [EventManagement] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-05-11T19:41:26.749+05:30  INFO 6564 --- [EventManagement] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@200d939d
+2025-05-11T19:41:26.750+05:30  INFO 6564 --- [EventManagement] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-05-11T19:41:26.755+05:30  WARN 6564 --- [EventManagement] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-11T19:41:26.756+05:30  INFO 6564 --- [EventManagement] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-11T19:41:26.927+05:30  INFO 6564 --- [EventManagement] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-11T19:41:26.962+05:30  INFO 6564 --- [EventManagement] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-11T19:41:27.200+05:30  WARN 6564 --- [EventManagement] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-11T19:41:27.655+05:30  WARN 6564 --- [EventManagement] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-05-11T19:41:27.779+05:30  INFO 6564 --- [EventManagement] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-11T19:41:27.815+05:30  WARN 6564 --- [EventManagement] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-11T19:41:27.874+05:30  INFO 6564 --- [EventManagement] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-05-11T19:41:27.886+05:30  INFO 6564 --- [EventManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-05-11T19:41:27.887+05:30  INFO 6564 --- [EventManagement] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-11T19:41:27.888+05:30  INFO 6564 --- [EventManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-05-11T19:41:27.888+05:30  INFO 6564 --- [EventManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-05-11T19:41:27.889+05:30  INFO 6564 --- [EventManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-05-11T19:41:27.890+05:30  INFO 6564 --- [EventManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-05-11T19:41:27.891+05:30  INFO 6564 --- [EventManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-05-11T19:41:27.891+05:30  INFO 6564 --- [EventManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-05-11T19:41:27.892+05:30  INFO 6564 --- [EventManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-05-11T19:41:27.975+05:30  INFO 6564 --- [EventManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-05-11T19:41:27.976+05:30  INFO 6564 --- [EventManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-05-11T19:41:27.978+05:30  INFO 6564 --- [EventManagement] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-05-11T19:41:27.978+05:30  INFO 6564 --- [EventManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1746972687978 with initial instances count: 6
+2025-05-11T19:41:27.983+05:30  INFO 6564 --- [EventManagement] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application EVENTMANAGEMENT with eureka with status UP
+2025-05-11T19:41:27.984+05:30  INFO 6564 --- [EventManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746972687984, current=UP, previous=STARTING]
+2025-05-11T19:41:27.984+05:30  INFO 6564 --- [EventManagement] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EVENTMANAGEMENT/LTIN617400.cts.com:EventManagement:3030: registering service...
+2025-05-11T19:41:27.994+05:30  INFO 6564 --- [EventManagement] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 3030 (http) with context path '/'
+2025-05-11T19:41:27.996+05:30  INFO 6564 --- [EventManagement] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 3030
+2025-05-11T19:41:28.009+05:30  INFO 6564 --- [EventManagement] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EVENTMANAGEMENT/LTIN617400.cts.com:EventManagement:3030 - registration status: 204
+2025-05-11T19:41:28.014+05:30  INFO 6564 --- [EventManagement] [restartedMain] com.cts.EventManagementApplication       : Started EventManagementApplication in 4.803 seconds (process running for 8345.648)
+2025-05-11T19:41:28.022+05:30  INFO 6564 --- [EventManagement] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-05-11T19:46:23.371+05:30  INFO 6564 --- [EventManagement] [RMI TCP Connection(59)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-05-11T19:46:23.373+05:30  INFO 6564 --- [EventManagement] [RMI TCP Connection(59)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application EVENTMANAGEMENT with eureka with status DOWN
+2025-05-11T19:46:23.374+05:30  INFO 6564 --- [EventManagement] [RMI TCP Connection(59)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746972983374, current=DOWN, previous=UP]
+2025-05-11T19:46:23.374+05:30  INFO 6564 --- [EventManagement] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EVENTMANAGEMENT/LTIN617400.cts.com:EventManagement:3030: registering service...
+2025-05-11T19:46:23.375+05:30  INFO 6564 --- [EventManagement] [RMI TCP Connection(59)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-11T19:46:23.383+05:30  INFO 6564 --- [EventManagement] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-11T19:46:23.389+05:30  INFO 6564 --- [EventManagement] [RMI TCP Connection(59)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-11T19:46:23.390+05:30  INFO 6564 --- [EventManagement] [RMI TCP Connection(59)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-05-11T19:46:23.395+05:30  INFO 6564 --- [EventManagement] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EVENTMANAGEMENT/LTIN617400.cts.com:EventManagement:3030 - registration status: 204
+2025-05-11T19:46:23.402+05:30  INFO 6564 --- [EventManagement] [RMI TCP Connection(59)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-05-11T19:46:23.403+05:30  INFO 6564 --- [EventManagement] [RMI TCP Connection(59)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-05-11T19:46:26.404+05:30  INFO 6564 --- [EventManagement] [RMI TCP Connection(59)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-05-11T19:46:26.424+05:30  INFO 6564 --- [EventManagement] [RMI TCP Connection(59)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EVENTMANAGEMENT/LTIN617400.cts.com:EventManagement:3030 - deregister  status: 200
+2025-05-11T19:46:26.425+05:30  INFO 6564 --- [EventManagement] [RMI TCP Connection(59)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
