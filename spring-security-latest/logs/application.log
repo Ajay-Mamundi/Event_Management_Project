@@ -134,3 +134,18 @@ io.jsonwebtoken.ExpiredJwtException: JWT expired at 2025-05-10T07:13:45Z. Curren
 2025-05-11T19:29:35.142+05:30  INFO 8964 --- [security-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2025-05-11T19:34:35.154+05:30  INFO 8964 --- [security-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2025-05-11T19:39:35.169+05:30  INFO 8964 --- [security-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-11T19:44:35.182+05:30  INFO 8964 --- [security-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-11T19:46:19.394+05:30  INFO 8964 --- [security-service] [RMI TCP Connection(56)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-05-11T19:46:19.407+05:30  INFO 8964 --- [security-service] [RMI TCP Connection(56)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application SECURITY-SERVICE with eureka with status DOWN
+2025-05-11T19:46:19.409+05:30  INFO 8964 --- [security-service] [RMI TCP Connection(56)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746972979409, current=DOWN, previous=UP]
+2025-05-11T19:46:19.410+05:30  INFO 8964 --- [security-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SECURITY-SERVICE/LTIN617400.cts.com:security-service:9194: registering service...
+2025-05-11T19:46:19.421+05:30  INFO 8964 --- [security-service] [RMI TCP Connection(56)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-11T19:46:19.431+05:30  INFO 8964 --- [security-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SECURITY-SERVICE/LTIN617400.cts.com:security-service:9194 - registration status: 204
+2025-05-11T19:46:19.442+05:30  INFO 8964 --- [security-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-11T19:46:19.470+05:30  INFO 8964 --- [security-service] [RMI TCP Connection(56)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-11T19:46:19.500+05:30  INFO 8964 --- [security-service] [RMI TCP Connection(56)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-11T19:46:19.522+05:30  INFO 8964 --- [security-service] [RMI TCP Connection(56)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-11T19:46:19.528+05:30  INFO 8964 --- [security-service] [RMI TCP Connection(56)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-05-11T19:46:22.529+05:30  INFO 8964 --- [security-service] [RMI TCP Connection(56)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-05-11T19:46:22.547+05:30  INFO 8964 --- [security-service] [RMI TCP Connection(56)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SECURITY-SERVICE/LTIN617400.cts.com:security-service:9194 - deregister  status: 200
+2025-05-11T19:46:22.548+05:30  INFO 8964 --- [security-service] [RMI TCP Connection(56)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
