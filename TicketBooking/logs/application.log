@@ -77,3 +77,4 @@
 2025-05-11T19:23:39.318+05:30  INFO 9308 --- [TicketBooking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2025-05-11T19:28:39.324+05:30  INFO 9308 --- [TicketBooking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2025-05-11T19:33:39.328+05:30  INFO 9308 --- [TicketBooking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-11T19:38:39.331+05:30  INFO 9308 --- [TicketBooking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
