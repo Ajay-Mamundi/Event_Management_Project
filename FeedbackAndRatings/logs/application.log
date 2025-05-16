@@ -439,3 +439,4 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 2025-05-16T12:03:04.269+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 3033
 2025-05-16T12:03:04.284+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] com.cts.FeedbackAndRatingsApplication    : Started FeedbackAndRatingsApplication in 6.715 seconds (process running for 7.677)
 2025-05-16T12:03:04.303+05:30  INFO 31816 --- [FeedbackAndRatings] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FEEDBACKANDRATINGS/LTIN617400.cts.com:FeedbackAndRatings:3033 - registration status: 204
+2025-05-16T12:08:03.986+05:30  INFO 31816 --- [FeedbackAndRatings] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

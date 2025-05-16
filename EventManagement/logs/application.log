@@ -95,3 +95,4 @@
 2025-05-16T12:03:18.232+05:30  INFO 17596 --- [EventManagement] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
 2025-05-16T12:03:18.232+05:30  INFO 17596 --- [EventManagement] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
 2025-05-16T12:03:18.269+05:30  INFO 17596 --- [EventManagement] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-05-16T12:07:47.844+05:30  INFO 17596 --- [EventManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
