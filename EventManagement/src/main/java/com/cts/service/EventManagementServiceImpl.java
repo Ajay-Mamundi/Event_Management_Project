@@ -51,7 +51,7 @@ public class EventManagementServiceImpl implements EventManagementService {
         } else {
             logger.error("Event not found with ID: {}", id);
             throw new EventNotFoundException("Invalid Event ID");
-        }
+        }    
     }
 
 

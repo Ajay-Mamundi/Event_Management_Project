@@ -12,8 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.cts.dto.BookingRequest;
-import com.cts.dto.EmailRequest;
+
 import com.cts.exceptions.TicketNotFoundException;
 import com.cts.model.TicketBooking;
 import com.cts.service.TicketBookingService;
@@ -26,10 +25,8 @@ public class TicketBookingController {
 	private TicketBookingService ticketBookingService;
 
 	@PostMapping("/book")
-	public TicketBooking bookTicket(@RequestBody BookingRequest bookingRequest) {
-		TicketBooking ticket = bookingRequest.getTicketBooking();
-		EmailRequest request = bookingRequest.getEmailRequest();
-		return ticketBookingService.bookTicket(ticket, request);
+	public TicketBooking bookTicket(@RequestBody TicketBooking ticket ) {
+		return ticketBookingService.bookTicket(ticket);
 	}
 
 	@GetMapping("getticketbyid/{ticketId}")

@@ -1,26 +1,407 @@
-2025-05-11T17:22:29.941+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.cts.FeedbackAndRatingsApplication    : Starting FeedbackAndRatingsApplication using Java 21.0.6 with PID 19788 (C:\Users\2401270\git\Em_project\FeedbackAndRatings\target\classes started by 2401270 in C:\Users\2401270\git\Em_project\FeedbackAndRatings)
-2025-05-11T17:22:29.957+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.cts.FeedbackAndRatingsApplication    : No active profile set, falling back to 1 default profile: "default"
-2025-05-11T17:22:30.093+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8083
-2025-05-11T17:22:30.094+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=FeedbackAndRatings, profiles=[default], label=null, version=7a833fc721876b5273d3e4e288ddb7b692088b6d, state=
-2025-05-11T17:22:30.099+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-05-11T17:22:30.099+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-05-11T17:22:31.915+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-05-11T17:22:32.149+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 214 ms. Found 1 JPA repository interface.
-2025-05-11T17:22:32.518+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1b0e6604-c70b-35dc-90d5-0367f5a27a34
-2025-05-11T17:22:33.453+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 3033 (http)
-2025-05-11T17:22:33.485+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-05-11T17:22:33.487+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
-2025-05-11T17:22:33.623+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-05-11T17:22:33.624+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3523 ms
-2025-05-11T17:22:33.907+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-05-11T17:22:33.981+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
-2025-05-11T17:22:34.025+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-05-11T17:22:34.653+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-05-11T17:22:34.719+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-05-11T17:22:35.426+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7822e4fb
-2025-05-11T17:22:35.431+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-05-11T17:22:35.558+05:30  WARN 19788 --- [FeedbackAndRatings] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-05-11T17:22:35.600+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-05-16T08:42:27.974+05:30  WARN 18092 --- [FeedbackAndRatings] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8h55m24s307ms592µs).
+2025-05-16T08:42:34.004+05:30  INFO 18092 --- [FeedbackAndRatings] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-16T08:47:34.029+05:30  INFO 18092 --- [FeedbackAndRatings] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-16T08:52:34.033+05:30  INFO 18092 --- [FeedbackAndRatings] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-16T08:57:34.037+05:30  INFO 18092 --- [FeedbackAndRatings] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-16T09:02:34.054+05:30  INFO 18092 --- [FeedbackAndRatings] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-16T09:07:34.060+05:30  INFO 18092 --- [FeedbackAndRatings] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-16T09:12:03.623+05:30  WARN 18092 --- [FeedbackAndRatings] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m5s167ms644µs).
+2025-05-16T09:14:09.239+05:30  INFO 18092 --- [FeedbackAndRatings] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-16T09:20:40.562+05:30  WARN 18092 --- [FeedbackAndRatings] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m6s855ms168µs300ns).
+2025-05-16T09:21:46.099+05:30  INFO 18092 --- [FeedbackAndRatings] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-16T09:26:46.169+05:30  INFO 18092 --- [FeedbackAndRatings] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-16T09:31:46.182+05:30  INFO 18092 --- [FeedbackAndRatings] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-16T09:46:21.164+05:30  WARN 18092 --- [FeedbackAndRatings] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13m40s438ms493µs800ns).
+2025-05-16T09:49:56.621+05:30  INFO 18092 --- [FeedbackAndRatings] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-16T09:54:56.633+05:30  INFO 18092 --- [FeedbackAndRatings] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-16T10:04:23.515+05:30  WARN 18092 --- [FeedbackAndRatings] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m2s203ms880µs500ns).
+2025-05-16T10:07:28.825+05:30  INFO 18092 --- [FeedbackAndRatings] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-16T10:27:34.678+05:30  WARN 18092 --- [FeedbackAndRatings] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=19m41s102ms653µs800ns).
+2025-05-16T10:31:39.920+05:30  INFO 18092 --- [FeedbackAndRatings] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-16T10:36:39.948+05:30  INFO 18092 --- [FeedbackAndRatings] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-16T10:41:39.952+05:30  INFO 18092 --- [FeedbackAndRatings] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-16T10:46:39.958+05:30  INFO 18092 --- [FeedbackAndRatings] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-16T10:58:33.086+05:30  WARN 18092 --- [FeedbackAndRatings] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m28s63ms671µs900ns).
+2025-05-16T11:00:38.024+05:30  INFO 18092 --- [FeedbackAndRatings] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-16T11:05:38.031+05:30  INFO 18092 --- [FeedbackAndRatings] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-16T11:27:19.955+05:30  INFO 18092 --- [FeedbackAndRatings] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-16T11:27:45.161+05:30  WARN 18092 --- [FeedbackAndRatings] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m11s882ms194µs800ns).
+2025-05-16T11:32:19.966+05:30  INFO 18092 --- [FeedbackAndRatings] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-16T11:37:19.970+05:30  INFO 18092 --- [FeedbackAndRatings] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-16T11:42:19.971+05:30  INFO 18092 --- [FeedbackAndRatings] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-16T11:47:19.987+05:30  INFO 18092 --- [FeedbackAndRatings] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-16T11:52:19.999+05:30  INFO 18092 --- [FeedbackAndRatings] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-16T11:54:16.884+05:30  INFO 18092 --- [FeedbackAndRatings] [RMI TCP Connection(360)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-05-16T11:54:16.927+05:30  INFO 18092 --- [FeedbackAndRatings] [RMI TCP Connection(360)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application FEEDBACKANDRATINGS with eureka with status DOWN
+2025-05-16T11:54:16.928+05:30  INFO 18092 --- [FeedbackAndRatings] [RMI TCP Connection(360)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1747376656928, current=DOWN, previous=UP]
+2025-05-16T11:54:16.930+05:30  INFO 18092 --- [FeedbackAndRatings] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FEEDBACKANDRATINGS/LTIN617400.cts.com:FeedbackAndRatings:3033: registering service...
+2025-05-16T11:54:16.984+05:30  INFO 18092 --- [FeedbackAndRatings] [RMI TCP Connection(360)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-16T11:54:17.010+05:30  INFO 18092 --- [FeedbackAndRatings] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-16T11:54:17.029+05:30  INFO 18092 --- [FeedbackAndRatings] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on POST request for "http://localhost:8761/eureka/apps/FEEDBACKANDRATINGS": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8761/eureka/apps/FEEDBACKANDRATINGS": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:87)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:183)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
+	... 21 more
+
+2025-05-16T11:54:17.030+05:30  WARN 18092 --- [FeedbackAndRatings] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://localhost:8761/eureka/apps/FEEDBACKANDRATINGS": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+2025-05-16T11:54:17.042+05:30  INFO 18092 --- [FeedbackAndRatings] [RMI TCP Connection(360)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16T11:54:17.043+05:30  INFO 18092 --- [FeedbackAndRatings] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on POST request for "http://localhost:8761/eureka/apps/FEEDBACKANDRATINGS": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8761/eureka/apps/FEEDBACKANDRATINGS": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:87)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:183)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
+	... 22 more
+
+2025-05-16T11:54:17.043+05:30  WARN 18092 --- [FeedbackAndRatings] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://localhost:8761/eureka/apps/FEEDBACKANDRATINGS": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+2025-05-16T11:54:17.043+05:30  WARN 18092 --- [FeedbackAndRatings] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FEEDBACKANDRATINGS/LTIN617400.cts.com:FeedbackAndRatings:3033 - registration failed Cannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105) ~[eureka-client-2.0.4.jar:2.0.4]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2025-05-16T11:54:17.050+05:30  WARN 18092 --- [FeedbackAndRatings] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105) ~[eureka-client-2.0.4.jar:2.0.4]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2025-05-16T11:54:17.081+05:30  INFO 18092 --- [FeedbackAndRatings] [RMI TCP Connection(360)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-16T11:54:17.090+05:30  INFO 18092 --- [FeedbackAndRatings] [RMI TCP Connection(360)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-16T11:54:17.091+05:30  INFO 18092 --- [FeedbackAndRatings] [RMI TCP Connection(360)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-05-16T11:54:20.104+05:30  INFO 18092 --- [FeedbackAndRatings] [RMI TCP Connection(360)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-05-16T11:54:20.151+05:30  INFO 18092 --- [FeedbackAndRatings] [RMI TCP Connection(360)-127.0.0.1] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/FEEDBACKANDRATINGS/LTIN617400.cts.com:FeedbackAndRatings:3033": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/FEEDBACKANDRATINGS/LTIN617400.cts.com:FeedbackAndRatings:3033": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:100)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:202)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:195)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:796)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:746)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1473)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:705)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1466)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1219)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1180)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:179)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1126)
+	at org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown(SpringApplicationAdminMXBeanRegistrar.java:160)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:64)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:97)
+	at java.management/com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(ConvertingMethod.java:193)
+	at java.management/com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(ConvertingMethod.java:175)
+	at java.management/com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(MXBeanIntrospector.java:115)
+	at java.management/com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(MXBeanIntrospector.java:52)
+	at java.management/com.sun.jmx.mbeanserver.MBeanIntrospector.invokeM(MBeanIntrospector.java:236)
+	at java.management/com.sun.jmx.mbeanserver.PerInterface.invoke(PerInterface.java:138)
+	at java.management/com.sun.jmx.mbeanserver.MBeanSupport.invoke(MBeanSupport.java:252)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:803)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:802)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1472)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:714)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:598)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:844)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:721)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:720)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:183)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
+	... 69 more
+
+2025-05-16T11:54:20.152+05:30  WARN 18092 --- [FeedbackAndRatings] [RMI TCP Connection(360)-127.0.0.1] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/FEEDBACKANDRATINGS/LTIN617400.cts.com:FeedbackAndRatings:3033": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+2025-05-16T11:54:20.152+05:30 ERROR 18092 --- [FeedbackAndRatings] [RMI TCP Connection(360)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FEEDBACKANDRATINGS/LTIN617400.cts.com:FeedbackAndRatings:3033 - de-registration failedCannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900) ~[eureka-client-2.0.4.jar:2.0.4]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:202) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:195) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389) ~[spring-cloud-context-4.2.1.jar:4.2.1]
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136) ~[spring-cloud-context-4.2.1.jar:4.2.1]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:796) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:746) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1473) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:705) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1466) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1219) ~[spring-context-6.2.6.jar:6.2.6]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1180) ~[spring-context-6.2.6.jar:6.2.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:179) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1126) ~[spring-context-6.2.6.jar:6.2.6]
+	at org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown(SpringApplicationAdminMXBeanRegistrar.java:160) ~[spring-boot-3.4.5.jar:3.4.5]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at java.base/sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:97) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(ConvertingMethod.java:193) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(ConvertingMethod.java:175) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(MXBeanIntrospector.java:115) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(MXBeanIntrospector.java:52) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.MBeanIntrospector.invokeM(MBeanIntrospector.java:236) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.PerInterface.invoke(PerInterface.java:138) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.MBeanSupport.invoke(MBeanSupport.java:252) ~[na:na]
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:803) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:802) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1472) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829) ~[na:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360) ~[na:na]
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200) ~[na:na]
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197) ~[na:na]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:714) ~[na:na]
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:598) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:844) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:721) ~[na:na]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:720) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2025-05-16T11:54:20.155+05:30  INFO 18092 --- [FeedbackAndRatings] [RMI TCP Connection(360)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-05-16T12:02:59.021+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] com.cts.FeedbackAndRatingsApplication    : Starting FeedbackAndRatingsApplication using Java 21.0.6 with PID 31816 (C:\Users\2401270\git\Em_project\FeedbackAndRatings\target\classes started by 2401270 in C:\Users\2401270\git\Em_project\FeedbackAndRatings)
+2025-05-16T12:02:59.024+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] com.cts.FeedbackAndRatingsApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-05-16T12:02:59.119+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8083
+2025-05-16T12:02:59.119+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=FeedbackAndRatings, profiles=[default], label=null, version=7a833fc721876b5273d3e4e288ddb7b692088b6d, state=
+2025-05-16T12:02:59.121+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-16T12:02:59.121+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-16T12:02:59.793+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-16T12:02:59.933+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 129 ms. Found 1 JPA repository interface.
+2025-05-16T12:03:00.157+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1b0e6604-c70b-35dc-90d5-0367f5a27a34
+2025-05-16T12:03:00.619+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 3033 (http)
+2025-05-16T12:03:00.630+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-16T12:03:00.631+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-16T12:03:00.685+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-16T12:03:00.687+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1565 ms
+2025-05-16T12:03:00.814+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-16T12:03:00.865+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-16T12:03:00.894+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-16T12:03:01.118+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-16T12:03:01.146+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-16T12:03:01.435+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3d546ccb
+2025-05-16T12:03:01.438+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-16T12:03:01.494+05:30  WARN 31816 --- [FeedbackAndRatings] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-16T12:03:01.512+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 8.0.41
@@ -28,413 +409,33 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-05-11T17:22:37.770+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-05-11T17:22:37.874+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-05-11T17:22:38.682+05:30  WARN 19788 --- [FeedbackAndRatings] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-05-11T17:22:38.779+05:30  WARN 19788 --- [FeedbackAndRatings] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2025-05-11T17:22:39.209+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'EVENTMANAGEMENT' URL not provided. Will try picking an instance via load-balancing.
-2025-05-11T17:22:39.353+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'USERREGISTRATION' URL not provided. Will try picking an instance via load-balancing.
-2025-05-11T17:22:40.976+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2025-05-11T17:22:41.070+05:30  WARN 19788 --- [FeedbackAndRatings] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2025-05-11T17:22:41.271+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2025-05-11T17:22:41.371+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2025-05-11T17:22:41.391+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-11T17:22:41.441+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2025-05-11T17:22:41.442+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2025-05-11T17:22:41.443+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2025-05-11T17:22:41.443+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2025-05-11T17:22:41.443+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2025-05-11T17:22:41.444+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2025-05-11T17:22:41.445+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2025-05-11T17:22:42.241+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2025-05-11T17:22:42.249+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2025-05-11T17:22:42.260+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2025-05-11T17:22:42.264+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1746964362264 with initial instances count: 2
-2025-05-11T17:22:42.280+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application FEEDBACKANDRATINGS with eureka with status UP
-2025-05-11T17:22:42.284+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746964362284, current=UP, previous=STARTING]
-2025-05-11T17:22:42.295+05:30  INFO 19788 --- [FeedbackAndRatings] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FEEDBACKANDRATINGS/LTIN617400.cts.com:FeedbackAndRatings:3033: registering service...
-2025-05-11T17:22:42.382+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 3033 (http) with context path '/'
-2025-05-11T17:22:42.385+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 3033
-2025-05-11T17:22:42.440+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.cts.FeedbackAndRatingsApplication    : Started FeedbackAndRatingsApplication in 15.406 seconds (process running for 17.673)
-2025-05-11T17:22:42.492+05:30  INFO 19788 --- [FeedbackAndRatings] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FEEDBACKANDRATINGS/LTIN617400.cts.com:FeedbackAndRatings:3033 - registration status: 204
-2025-05-11T17:27:41.467+05:30  INFO 19788 --- [FeedbackAndRatings] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-11T17:32:41.479+05:30  INFO 19788 --- [FeedbackAndRatings] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-11T17:36:36.071+05:30  INFO 19788 --- [FeedbackAndRatings] [http-nio-3033-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-05-11T17:36:36.072+05:30  INFO 19788 --- [FeedbackAndRatings] [http-nio-3033-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-05-11T17:36:36.076+05:30  INFO 19788 --- [FeedbackAndRatings] [http-nio-3033-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
-2025-05-11T17:36:36.176+05:30  INFO 19788 --- [FeedbackAndRatings] [http-nio-3033-exec-2] c.c.s.FeedbackAndRatingsServiceImpl      : Fetching feedback with ID: 1
-2025-05-11T17:36:36.382+05:30  INFO 19788 --- [FeedbackAndRatings] [http-nio-3033-exec-2] c.c.s.FeedbackAndRatingsServiceImpl      : Feedback found with ID: 1
-2025-05-11T17:37:41.481+05:30  INFO 19788 --- [FeedbackAndRatings] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-11T19:20:35.499+05:30  WARN 19788 --- [FeedbackAndRatings] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h41m59s727ms448µs1ns).
-2025-05-11T19:24:11.202+05:30  INFO 19788 --- [FeedbackAndRatings] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-11T19:29:11.205+05:30  INFO 19788 --- [FeedbackAndRatings] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-11T19:30:46.774+05:30  INFO 19788 --- [FeedbackAndRatings] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2025-05-11T19:30:46.779+05:30  INFO 19788 --- [FeedbackAndRatings] [Thread-1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application FEEDBACKANDRATINGS with eureka with status DOWN
-2025-05-11T19:30:46.780+05:30  INFO 19788 --- [FeedbackAndRatings] [Thread-1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746972046780, current=DOWN, previous=UP]
-2025-05-11T19:30:46.780+05:30  INFO 19788 --- [FeedbackAndRatings] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FEEDBACKANDRATINGS/LTIN617400.cts.com:FeedbackAndRatings:3033: registering service...
-2025-05-11T19:30:46.785+05:30  INFO 19788 --- [FeedbackAndRatings] [Thread-1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-05-11T19:30:46.798+05:30  INFO 19788 --- [FeedbackAndRatings] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FEEDBACKANDRATINGS/LTIN617400.cts.com:FeedbackAndRatings:3033 - registration status: 204
-2025-05-11T19:30:46.802+05:30  INFO 19788 --- [FeedbackAndRatings] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-05-11T19:30:46.832+05:30  INFO 19788 --- [FeedbackAndRatings] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-05-11T19:30:46.852+05:30  INFO 19788 --- [FeedbackAndRatings] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-05-11T19:30:46.884+05:30  INFO 19788 --- [FeedbackAndRatings] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-05-11T19:30:46.886+05:30  INFO 19788 --- [FeedbackAndRatings] [Thread-1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2025-05-11T19:30:49.887+05:30  INFO 19788 --- [FeedbackAndRatings] [Thread-1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2025-05-11T19:30:49.896+05:30  INFO 19788 --- [FeedbackAndRatings] [Thread-1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FEEDBACKANDRATINGS/LTIN617400.cts.com:FeedbackAndRatings:3033 - deregister  status: 200
-2025-05-11T19:30:49.897+05:30  INFO 19788 --- [FeedbackAndRatings] [Thread-1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
-2025-05-11T19:30:59.003+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.cts.FeedbackAndRatingsApplication    : Starting FeedbackAndRatingsApplication using Java 21.0.6 with PID 19788 (C:\Users\2401270\git\Em_project\FeedbackAndRatings\target\classes started by 2401270 in C:\Users\2401270\git\Em_project\FeedbackAndRatings)
-2025-05-11T19:30:59.004+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.cts.FeedbackAndRatingsApplication    : No active profile set, falling back to 1 default profile: "default"
-2025-05-11T19:30:59.010+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8083
-2025-05-11T19:30:59.010+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=FeedbackAndRatings, profiles=[default], label=null, version=7a833fc721876b5273d3e4e288ddb7b692088b6d, state=
-2025-05-11T19:30:59.791+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-05-11T19:30:59.807+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 1 JPA repository interface.
-2025-05-11T19:30:59.925+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1b0e6604-c70b-35dc-90d5-0367f5a27a34
-2025-05-11T19:31:00.059+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 3033 (http)
-2025-05-11T19:31:00.063+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-05-11T19:31:00.063+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
-2025-05-11T19:31:00.158+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-05-11T19:31:00.158+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1147 ms
-2025-05-11T19:31:00.225+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-05-11T19:31:00.231+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-05-11T19:31:00.261+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-05-11T19:31:00.266+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2025-05-11T19:31:00.313+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@102019ec
-2025-05-11T19:31:00.314+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2025-05-11T19:31:00.319+05:30  WARN 19788 --- [FeedbackAndRatings] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-05-11T19:31:00.321+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
-	Database driver: undefined/unknown
-	Database version: 8.0.41
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-05-11T19:31:00.418+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-05-11T19:31:00.449+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-05-11T19:31:00.462+05:30  WARN 19788 --- [FeedbackAndRatings] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'feedbackAndRatingsController' defined in file [C:\Users\2401270\git\Em_project\FeedbackAndRatings\target\classes\com\cts\controller\FeedbackAndRatingsController.class]: Failed to instantiate [com.cts.controller.FeedbackAndRatingsController]: Constructor threw exception
-2025-05-11T19:31:00.463+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-05-11T19:31:00.464+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2025-05-11T19:31:00.479+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
-2025-05-11T19:31:00.481+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2025-05-11T19:31:00.492+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-05-11T19:31:00.534+05:30 ERROR 19788 --- [FeedbackAndRatings] [restartedMain] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'feedbackAndRatingsController' defined in file [C:\Users\2401270\git\Em_project\FeedbackAndRatings\target\classes\com\cts\controller\FeedbackAndRatingsController.class]: Failed to instantiate [com.cts.controller.FeedbackAndRatingsController]: Constructor threw exception
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1349) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1234) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1221) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1187) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1122) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351) ~[spring-boot-3.4.5.jar:3.4.5]
-	at com.cts.FeedbackAndRatingsApplication.main(FeedbackAndRatingsApplication.java:12) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.4.5.jar:3.4.5]
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.cts.controller.FeedbackAndRatingsController]: Constructor threw exception
-	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:222) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:122) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1343) ~[spring-beans-6.2.6.jar:6.2.6]
-	... 22 common frames omitted
-Caused by: java.lang.Error: Unresolved compilation problem: 
-	Syntax error on token "Invalid Character", delete this token
-
-	at com.cts.controller.FeedbackAndRatingsController.<init>(FeedbackAndRatingsController.java:52) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[na:na]
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[na:na]
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[na:na]
-	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:196) ~[spring-beans-6.2.6.jar:6.2.6]
-	... 24 common frames omitted
-
-2025-05-11T19:31:04.207+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.cts.FeedbackAndRatingsApplication    : Starting FeedbackAndRatingsApplication using Java 21.0.6 with PID 19788 (C:\Users\2401270\git\Em_project\FeedbackAndRatings\target\classes started by 2401270 in C:\Users\2401270\git\Em_project\FeedbackAndRatings)
-2025-05-11T19:31:04.208+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.cts.FeedbackAndRatingsApplication    : No active profile set, falling back to 1 default profile: "default"
-2025-05-11T19:31:04.212+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8083
-2025-05-11T19:31:04.212+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=FeedbackAndRatings, profiles=[default], label=null, version=7a833fc721876b5273d3e4e288ddb7b692088b6d, state=
-2025-05-11T19:31:04.543+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-05-11T19:31:04.563+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 1 JPA repository interface.
-2025-05-11T19:31:04.732+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1b0e6604-c70b-35dc-90d5-0367f5a27a34
-2025-05-11T19:31:04.874+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 3033 (http)
-2025-05-11T19:31:04.876+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-05-11T19:31:04.877+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
-2025-05-11T19:31:04.950+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
-2025-05-11T19:31:04.950+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 737 ms
-2025-05-11T19:31:05.017+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-05-11T19:31:05.026+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-05-11T19:31:05.085+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-05-11T19:31:05.087+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
-2025-05-11T19:31:05.117+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@a6636f9
-2025-05-11T19:31:05.118+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
-2025-05-11T19:31:05.120+05:30  WARN 19788 --- [FeedbackAndRatings] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-05-11T19:31:05.120+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
-	Database driver: undefined/unknown
-	Database version: 8.0.41
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-05-11T19:31:05.193+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-05-11T19:31:05.212+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-05-11T19:31:05.223+05:30  WARN 19788 --- [FeedbackAndRatings] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'feedbackAndRatingsController' defined in file [C:\Users\2401270\git\Em_project\FeedbackAndRatings\target\classes\com\cts\controller\FeedbackAndRatingsController.class]: Failed to instantiate [com.cts.controller.FeedbackAndRatingsController]: Constructor threw exception
-2025-05-11T19:31:05.223+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-05-11T19:31:05.224+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
-2025-05-11T19:31:05.287+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
-2025-05-11T19:31:05.289+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2025-05-11T19:31:05.304+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-05-11T19:31:05.322+05:30 ERROR 19788 --- [FeedbackAndRatings] [restartedMain] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'feedbackAndRatingsController' defined in file [C:\Users\2401270\git\Em_project\FeedbackAndRatings\target\classes\com\cts\controller\FeedbackAndRatingsController.class]: Failed to instantiate [com.cts.controller.FeedbackAndRatingsController]: Constructor threw exception
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1349) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1234) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1221) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1187) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1122) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351) ~[spring-boot-3.4.5.jar:3.4.5]
-	at com.cts.FeedbackAndRatingsApplication.main(FeedbackAndRatingsApplication.java:12) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.4.5.jar:3.4.5]
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.cts.controller.FeedbackAndRatingsController]: Constructor threw exception
-	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:222) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:122) ~[spring-beans-6.2.6.jar:6.2.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1343) ~[spring-beans-6.2.6.jar:6.2.6]
-	... 22 common frames omitted
-Caused by: java.lang.Error: Unresolved compilation problem: 
-	Syntax error on token "Invalid Character", delete this token
-
-	at com.cts.controller.FeedbackAndRatingsController.<init>(FeedbackAndRatingsController.java:52) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[na:na]
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[na:na]
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[na:na]
-	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:196) ~[spring-beans-6.2.6.jar:6.2.6]
-	... 24 common frames omitted
-
-2025-05-11T19:31:27.901+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.cts.FeedbackAndRatingsApplication    : Starting FeedbackAndRatingsApplication using Java 21.0.6 with PID 19788 (C:\Users\2401270\git\Em_project\FeedbackAndRatings\target\classes started by 2401270 in C:\Users\2401270\git\Em_project\FeedbackAndRatings)
-2025-05-11T19:31:27.901+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.cts.FeedbackAndRatingsApplication    : No active profile set, falling back to 1 default profile: "default"
-2025-05-11T19:31:27.904+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8083
-2025-05-11T19:31:27.904+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=FeedbackAndRatings, profiles=[default], label=null, version=7a833fc721876b5273d3e4e288ddb7b692088b6d, state=
-2025-05-11T19:31:28.342+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-05-11T19:31:28.365+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 1 JPA repository interface.
-2025-05-11T19:31:28.526+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1b0e6604-c70b-35dc-90d5-0367f5a27a34
-2025-05-11T19:31:28.632+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 3033 (http)
-2025-05-11T19:31:28.633+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-05-11T19:31:28.634+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
-2025-05-11T19:31:28.747+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
-2025-05-11T19:31:28.747+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 842 ms
-2025-05-11T19:31:28.800+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-05-11T19:31:28.807+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-05-11T19:31:28.824+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-05-11T19:31:28.826+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
-2025-05-11T19:31:28.856+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@72a3510c
-2025-05-11T19:31:28.856+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
-2025-05-11T19:31:28.860+05:30  WARN 19788 --- [FeedbackAndRatings] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-05-11T19:31:28.861+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-4)']
-	Database driver: undefined/unknown
-	Database version: 8.0.41
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-05-11T19:31:28.940+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-05-11T19:31:28.959+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-05-11T19:31:29.116+05:30  WARN 19788 --- [FeedbackAndRatings] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-05-11T19:31:29.141+05:30  WARN 19788 --- [FeedbackAndRatings] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2025-05-11T19:31:29.197+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'EVENTMANAGEMENT' URL not provided. Will try picking an instance via load-balancing.
-2025-05-11T19:31:29.248+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'USERREGISTRATION' URL not provided. Will try picking an instance via load-balancing.
-2025-05-11T19:31:29.552+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2025-05-11T19:31:29.574+05:30  WARN 19788 --- [FeedbackAndRatings] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2025-05-11T19:31:29.607+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2025-05-11T19:31:29.611+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2025-05-11T19:31:29.612+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-11T19:31:29.612+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2025-05-11T19:31:29.612+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2025-05-11T19:31:29.612+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2025-05-11T19:31:29.613+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2025-05-11T19:31:29.613+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2025-05-11T19:31:29.613+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2025-05-11T19:31:29.613+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2025-05-11T19:31:29.736+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2025-05-11T19:31:29.738+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2025-05-11T19:31:29.738+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2025-05-11T19:31:29.739+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1746972089739 with initial instances count: 5
-2025-05-11T19:31:29.744+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application FEEDBACKANDRATINGS with eureka with status UP
-2025-05-11T19:31:29.745+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746972089745, current=UP, previous=STARTING]
-2025-05-11T19:31:29.745+05:30  INFO 19788 --- [FeedbackAndRatings] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FEEDBACKANDRATINGS/LTIN617400.cts.com:FeedbackAndRatings:3033: registering service...
-2025-05-11T19:31:29.759+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 3033 (http) with context path '/'
-2025-05-11T19:31:29.761+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 3033
-2025-05-11T19:31:29.773+05:30  INFO 19788 --- [FeedbackAndRatings] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FEEDBACKANDRATINGS/LTIN617400.cts.com:FeedbackAndRatings:3033 - registration status: 204
-2025-05-11T19:31:29.783+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.cts.FeedbackAndRatingsApplication    : Started FeedbackAndRatingsApplication in 4.386 seconds (process running for 7745.017)
-2025-05-11T19:31:29.791+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2025-05-11T19:35:14.648+05:30  INFO 19788 --- [FeedbackAndRatings] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2025-05-11T19:35:14.651+05:30  INFO 19788 --- [FeedbackAndRatings] [Thread-7] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application FEEDBACKANDRATINGS with eureka with status DOWN
-2025-05-11T19:35:14.652+05:30  INFO 19788 --- [FeedbackAndRatings] [Thread-7] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746972314652, current=DOWN, previous=UP]
-2025-05-11T19:35:14.652+05:30  INFO 19788 --- [FeedbackAndRatings] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FEEDBACKANDRATINGS/LTIN617400.cts.com:FeedbackAndRatings:3033: registering service...
-2025-05-11T19:35:14.653+05:30  INFO 19788 --- [FeedbackAndRatings] [Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-05-11T19:35:14.663+05:30  INFO 19788 --- [FeedbackAndRatings] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FEEDBACKANDRATINGS/LTIN617400.cts.com:FeedbackAndRatings:3033 - registration status: 204
-2025-05-11T19:35:14.664+05:30  INFO 19788 --- [FeedbackAndRatings] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-05-11T19:35:14.672+05:30  INFO 19788 --- [FeedbackAndRatings] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-05-11T19:35:14.673+05:30  INFO 19788 --- [FeedbackAndRatings] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
-2025-05-11T19:35:14.690+05:30  INFO 19788 --- [FeedbackAndRatings] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
-2025-05-11T19:35:14.691+05:30  INFO 19788 --- [FeedbackAndRatings] [Thread-7] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2025-05-11T19:35:17.702+05:30  INFO 19788 --- [FeedbackAndRatings] [Thread-7] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2025-05-11T19:35:17.723+05:30  INFO 19788 --- [FeedbackAndRatings] [Thread-7] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FEEDBACKANDRATINGS/LTIN617400.cts.com:FeedbackAndRatings:3033 - deregister  status: 200
-2025-05-11T19:35:17.724+05:30  INFO 19788 --- [FeedbackAndRatings] [Thread-7] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
-2025-05-11T19:35:19.716+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.cts.FeedbackAndRatingsApplication    : Starting FeedbackAndRatingsApplication using Java 21.0.6 with PID 19788 (C:\Users\2401270\git\Em_project\FeedbackAndRatings\target\classes started by 2401270 in C:\Users\2401270\git\Em_project\FeedbackAndRatings)
-2025-05-11T19:35:19.717+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.cts.FeedbackAndRatingsApplication    : No active profile set, falling back to 1 default profile: "default"
-2025-05-11T19:35:19.724+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8083
-2025-05-11T19:35:19.725+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=FeedbackAndRatings, profiles=[default], label=null, version=7a833fc721876b5273d3e4e288ddb7b692088b6d, state=
-2025-05-11T19:35:21.104+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-05-11T19:35:21.183+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 72 ms. Found 1 JPA repository interface.
-2025-05-11T19:35:21.638+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1b0e6604-c70b-35dc-90d5-0367f5a27a34
-2025-05-11T19:35:22.116+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 3033 (http)
-2025-05-11T19:35:22.116+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-05-11T19:35:22.116+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
-2025-05-11T19:35:22.358+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
-2025-05-11T19:35:22.359+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2631 ms
-2025-05-11T19:35:22.505+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-05-11T19:35:22.520+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-05-11T19:35:22.569+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-05-11T19:35:22.578+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
-2025-05-11T19:35:22.631+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@68163f64
-2025-05-11T19:35:22.632+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
-2025-05-11T19:35:22.637+05:30  WARN 19788 --- [FeedbackAndRatings] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-05-11T19:35:22.638+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-5)']
-	Database driver: undefined/unknown
-	Database version: 8.0.41
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-05-11T19:35:22.862+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-05-11T19:35:22.901+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-05-11T19:35:23.241+05:30  WARN 19788 --- [FeedbackAndRatings] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-05-11T19:35:23.301+05:30  WARN 19788 --- [FeedbackAndRatings] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2025-05-11T19:35:23.402+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'EVENTMANAGEMENT' URL not provided. Will try picking an instance via load-balancing.
-2025-05-11T19:35:23.494+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'USERREGISTRATION' URL not provided. Will try picking an instance via load-balancing.
-2025-05-11T19:35:24.028+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2025-05-11T19:35:24.066+05:30  WARN 19788 --- [FeedbackAndRatings] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2025-05-11T19:35:24.154+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2025-05-11T19:35:24.167+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2025-05-11T19:35:24.168+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-11T19:35:24.170+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2025-05-11T19:35:24.171+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2025-05-11T19:35:24.171+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2025-05-11T19:35:24.171+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2025-05-11T19:35:24.171+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2025-05-11T19:35:24.172+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2025-05-11T19:35:24.172+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2025-05-11T19:35:24.278+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2025-05-11T19:35:24.278+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2025-05-11T19:35:24.280+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2025-05-11T19:35:24.280+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1746972324280 with initial instances count: 6
-2025-05-11T19:35:24.288+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application FEEDBACKANDRATINGS with eureka with status UP
-2025-05-11T19:35:24.289+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746972324289, current=UP, previous=STARTING]
-2025-05-11T19:35:24.289+05:30  INFO 19788 --- [FeedbackAndRatings] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FEEDBACKANDRATINGS/LTIN617400.cts.com:FeedbackAndRatings:3033: registering service...
-2025-05-11T19:35:24.304+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 3033 (http) with context path '/'
-2025-05-11T19:35:24.305+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 3033
-2025-05-11T19:35:24.328+05:30  INFO 19788 --- [FeedbackAndRatings] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FEEDBACKANDRATINGS/LTIN617400.cts.com:FeedbackAndRatings:3033 - registration status: 204
-2025-05-11T19:35:24.336+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.cts.FeedbackAndRatingsApplication    : Started FeedbackAndRatingsApplication in 6.461 seconds (process running for 7979.569)
-2025-05-11T19:35:24.341+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2025-05-11T19:36:06.835+05:30  INFO 19788 --- [FeedbackAndRatings] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2025-05-11T19:36:06.838+05:30  INFO 19788 --- [FeedbackAndRatings] [Thread-21] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application FEEDBACKANDRATINGS with eureka with status DOWN
-2025-05-11T19:36:06.839+05:30  INFO 19788 --- [FeedbackAndRatings] [Thread-21] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746972366839, current=DOWN, previous=UP]
-2025-05-11T19:36:06.839+05:30  INFO 19788 --- [FeedbackAndRatings] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FEEDBACKANDRATINGS/LTIN617400.cts.com:FeedbackAndRatings:3033: registering service...
-2025-05-11T19:36:06.841+05:30  INFO 19788 --- [FeedbackAndRatings] [Thread-21] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-05-11T19:36:06.850+05:30  INFO 19788 --- [FeedbackAndRatings] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FEEDBACKANDRATINGS/LTIN617400.cts.com:FeedbackAndRatings:3033 - registration status: 204
-2025-05-11T19:36:06.857+05:30  INFO 19788 --- [FeedbackAndRatings] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-05-11T19:36:06.866+05:30  INFO 19788 --- [FeedbackAndRatings] [Thread-21] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-05-11T19:36:06.867+05:30  INFO 19788 --- [FeedbackAndRatings] [Thread-21] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
-2025-05-11T19:36:06.886+05:30  INFO 19788 --- [FeedbackAndRatings] [Thread-21] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
-2025-05-11T19:36:06.888+05:30  INFO 19788 --- [FeedbackAndRatings] [Thread-21] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2025-05-11T19:36:09.890+05:30  INFO 19788 --- [FeedbackAndRatings] [Thread-21] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2025-05-11T19:36:09.899+05:30  INFO 19788 --- [FeedbackAndRatings] [Thread-21] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FEEDBACKANDRATINGS/LTIN617400.cts.com:FeedbackAndRatings:3033 - deregister  status: 200
-2025-05-11T19:36:09.900+05:30  INFO 19788 --- [FeedbackAndRatings] [Thread-21] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
-2025-05-11T19:36:10.927+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.cts.FeedbackAndRatingsApplication    : Starting FeedbackAndRatingsApplication using Java 21.0.6 with PID 19788 (C:\Users\2401270\git\Em_project\FeedbackAndRatings\target\classes started by 2401270 in C:\Users\2401270\git\Em_project\FeedbackAndRatings)
-2025-05-11T19:36:10.928+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.cts.FeedbackAndRatingsApplication    : No active profile set, falling back to 1 default profile: "default"
-2025-05-11T19:36:10.931+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8083
-2025-05-11T19:36:10.932+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=FeedbackAndRatings, profiles=[default], label=null, version=7a833fc721876b5273d3e4e288ddb7b692088b6d, state=
-2025-05-11T19:36:11.179+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-05-11T19:36:11.192+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 1 JPA repository interface.
-2025-05-11T19:36:11.270+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1b0e6604-c70b-35dc-90d5-0367f5a27a34
-2025-05-11T19:36:11.418+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 3033 (http)
-2025-05-11T19:36:11.419+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-05-11T19:36:11.419+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
-2025-05-11T19:36:11.464+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
-2025-05-11T19:36:11.464+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 532 ms
-2025-05-11T19:36:11.507+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-05-11T19:36:11.515+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-05-11T19:36:11.536+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-05-11T19:36:11.538+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
-2025-05-11T19:36:11.580+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6ddc3522
-2025-05-11T19:36:11.581+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
-2025-05-11T19:36:11.584+05:30  WARN 19788 --- [FeedbackAndRatings] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-05-11T19:36:11.584+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-6)']
-	Database driver: undefined/unknown
-	Database version: 8.0.41
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-05-11T19:36:11.670+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-05-11T19:36:11.688+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-05-11T19:36:11.809+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-05-11T19:36:13.103+05:30  WARN 19788 --- [FeedbackAndRatings] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-05-11T19:36:13.121+05:30  WARN 19788 --- [FeedbackAndRatings] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2025-05-11T19:36:13.162+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'EVENTMANAGEMENT' URL not provided. Will try picking an instance via load-balancing.
-2025-05-11T19:36:13.202+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'USERREGISTRATION' URL not provided. Will try picking an instance via load-balancing.
-2025-05-11T19:36:13.448+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2025-05-11T19:36:13.458+05:30  WARN 19788 --- [FeedbackAndRatings] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2025-05-11T19:36:13.479+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2025-05-11T19:36:13.482+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2025-05-11T19:36:13.482+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-11T19:36:13.483+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2025-05-11T19:36:13.483+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2025-05-11T19:36:13.483+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2025-05-11T19:36:13.483+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2025-05-11T19:36:13.483+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2025-05-11T19:36:13.483+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2025-05-11T19:36:13.483+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2025-05-11T19:36:13.524+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2025-05-11T19:36:13.525+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2025-05-11T19:36:13.526+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2025-05-11T19:36:13.527+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1746972373527 with initial instances count: 6
-2025-05-11T19:36:13.529+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application FEEDBACKANDRATINGS with eureka with status UP
-2025-05-11T19:36:13.529+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746972373529, current=UP, previous=STARTING]
-2025-05-11T19:36:13.530+05:30  INFO 19788 --- [FeedbackAndRatings] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FEEDBACKANDRATINGS/LTIN617400.cts.com:FeedbackAndRatings:3033: registering service...
-2025-05-11T19:36:13.547+05:30  INFO 19788 --- [FeedbackAndRatings] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FEEDBACKANDRATINGS/LTIN617400.cts.com:FeedbackAndRatings:3033 - registration status: 204
-2025-05-11T19:36:13.549+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 3033 (http) with context path '/'
-2025-05-11T19:36:13.549+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 3033
-2025-05-11T19:36:13.564+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] com.cts.FeedbackAndRatingsApplication    : Started FeedbackAndRatingsApplication in 3.563 seconds (process running for 8028.797)
-2025-05-11T19:36:13.569+05:30  INFO 19788 --- [FeedbackAndRatings] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-05-16T12:03:02.329+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-16T12:03:02.375+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16T12:03:02.638+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-16T12:03:03.243+05:30  WARN 31816 --- [FeedbackAndRatings] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-16T12:03:03.288+05:30  WARN 31816 --- [FeedbackAndRatings] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-05-16T12:03:03.413+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'EVENTMANAGEMENT' URL not provided. Will try picking an instance via load-balancing.
+2025-05-16T12:03:03.471+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'USERREGISTRATION' URL not provided. Will try picking an instance via load-balancing.
+2025-05-16T12:03:03.853+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-16T12:03:03.878+05:30  WARN 31816 --- [FeedbackAndRatings] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-16T12:03:03.939+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-05-16T12:03:03.963+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-05-16T12:03:03.970+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-16T12:03:03.981+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-05-16T12:03:03.982+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-05-16T12:03:03.982+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-05-16T12:03:03.982+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-05-16T12:03:03.982+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-05-16T12:03:03.982+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-05-16T12:03:03.983+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-05-16T12:03:04.218+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-05-16T12:03:04.224+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-05-16T12:03:04.227+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-05-16T12:03:04.228+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1747377184228 with initial instances count: 1
+2025-05-16T12:03:04.233+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application FEEDBACKANDRATINGS with eureka with status UP
+2025-05-16T12:03:04.234+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1747377184234, current=UP, previous=STARTING]
+2025-05-16T12:03:04.236+05:30  INFO 31816 --- [FeedbackAndRatings] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FEEDBACKANDRATINGS/LTIN617400.cts.com:FeedbackAndRatings:3033: registering service...
+2025-05-16T12:03:04.268+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 3033 (http) with context path '/'
+2025-05-16T12:03:04.269+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 3033
+2025-05-16T12:03:04.284+05:30  INFO 31816 --- [FeedbackAndRatings] [restartedMain] com.cts.FeedbackAndRatingsApplication    : Started FeedbackAndRatingsApplication in 6.715 seconds (process running for 7.677)
+2025-05-16T12:03:04.303+05:30  INFO 31816 --- [FeedbackAndRatings] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_FEEDBACKANDRATINGS/LTIN617400.cts.com:FeedbackAndRatings:3033 - registration status: 204

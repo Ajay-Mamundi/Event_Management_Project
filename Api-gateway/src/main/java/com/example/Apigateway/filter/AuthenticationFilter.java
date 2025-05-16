@@ -58,17 +58,17 @@ public class AuthenticationFilter extends AbstractGatewayFilterFactory<Authentic
         };
     }
 
-    private boolean isAuthorized(String role, String path, String method) {
+    private boolean isAuthorized(String role, String path, String  method) {
 		if ("ADMIN".equalsIgnoreCase(role)) {
 			return path.startsWith("/users") || path.startsWith("/feedbackandratings") || path.startsWith("/events")
 					||path.startsWith("/tickets");
 
 		} else if ("ORGANIZER".equalsIgnoreCase(role)) {
-			return path.startsWith("/tickets") || path.startsWith("/events")
-					|| path.startsWith("/feedbackandratings") || (path.startsWith("/users")&& method.equalsIgnoreCase("GET"));
+			return (path.startsWith("/tickets") && method.equalsIgnoreCase("GET"))|| path.startsWith("/events")
+					|| (path.startsWith("/feedbackandratings") && method.equalsIgnoreCase("GET")) || (path.startsWith("/users")&& method.equalsIgnoreCase("GET"));
 				
 		}else if ("USER".equalsIgnoreCase(role)) {
-			return path.startsWith("/feedbackandratings") ||(path.startsWith("/users") && (method.equalsIgnoreCase("POST") || method.equalsIgnoreCase("PUT")))
+			return (path.startsWith("/feedbackandratings")&& (method.equalsIgnoreCase("PUT") || method.equalsIgnoreCase("POST")))||(path.startsWith("/users") && (method.equalsIgnoreCase("POST") || method.equalsIgnoreCase("PUT")))
 					|| path.startsWith("/events") && method.equalsIgnoreCase("GET") || path.startsWith("/ticket");
 
 		}

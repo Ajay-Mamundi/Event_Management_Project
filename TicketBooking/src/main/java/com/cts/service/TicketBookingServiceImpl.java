@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.cts.dto.EmailRequest;
+
 import com.cts.dto.EventManagement;
 import com.cts.dto.UserRegistration;
 import  com.cts.exceptions.TicketNotFoundException;
@@ -39,26 +39,31 @@ public class TicketBookingServiceImpl implements TicketBookingService {
     private JavaMailSender javaMailSender;
 
     @Override
-    public TicketBooking bookTicket(TicketBooking ticket, EmailRequest request) {
+    public TicketBooking bookTicket(TicketBooking ticket) {
         logger.info("Booking ticket for event ID: {} and user ID: {}", ticket.getEventId(), ticket.getUserId());
 
-        // Check if the event exists
         EventManagement eventDetails = eventClient.getEventById(ticket.getEventId());
 
-        // Check if the user exists
         UserRegistration userDetails = userClient.getUserById(ticket.getUserId());
 
-        // Decrease ticket count in Event Management
         eventClient.decreaseTicketCount(ticket.getEventId());
         logger.info("Decreased ticket count for event ID: {}", ticket.getEventId());
 
-        // Set booking date and status
         ticket.setTicketBookingDate(LocalDateTime.now());
         ticket.setTicketStatus(TicketBooking.Status.BOOKED);
 
         UserRegistration user = userClient.getUserById(ticket.getUserId());
         String emailId = user.getUserEmail();
-        sendEmail(emailId, request.getSubject(), request.getMessage());
+        
+        String subject = "Ticket booking status";
+		String message = "Congratulations! Your ticket has been booked successfully."+ "\n" +"Ticket Details:\n" +
+	               "User ID : " +ticket.getUserId() + "\n" +
+	               "Ticket ID : " + ticket.getTicketId() + "\n" +
+	               "Event ID : " + ticket.getEventId() + "\n" +
+	               "Event Name : " + eventDetails.getEventName().toUpperCase() + "\n" +
+	               "Event Locatoin : "+ eventDetails.getEventLocation().toUpperCase() + "\n" +
+	               "Event Date : "+ eventDetails.getEventDate();
+        sendEmail(emailId, subject, message);
         logger.info("Sent email to user ID: {}", ticket.getUserId());
 
         // Save the ticket booking

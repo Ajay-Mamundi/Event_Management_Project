@@ -19,7 +19,6 @@ import org.mockito.MockitoAnnotations;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 
-import com.cts.dto.EmailRequest;
 import com.cts.dto.EventManagement;
 import com.cts.dto.UserRegistration;
 import com.cts.exceptions.TicketNotFoundException;
@@ -56,7 +55,7 @@ class TicketBookingServiceImplTest {
         TicketBooking ticket = new TicketBooking();
         ticket.setEventId(1);
         ticket.setUserId(1);
-        EmailRequest request = new EmailRequest("Subject", "Message");
+    
 
         EventManagement event = new EventManagement();
         UserRegistration user = new UserRegistration();
@@ -66,7 +65,7 @@ class TicketBookingServiceImplTest {
         when(userClient.getUserById(1)).thenReturn(user);
         when(repository.save(ticket)).thenReturn(ticket);
 
-        TicketBooking result = service.bookTicket(ticket, request);
+        TicketBooking result = service.bookTicket(ticket);
         assertEquals(ticket, result);
         verify(eventClient, times(1)).decreaseTicketCount(1);
         verify(javaMailSender, times(1)).send(any(SimpleMailMessage.class));
